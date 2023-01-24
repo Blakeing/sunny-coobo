@@ -40,9 +40,9 @@ export default async function HomePage() {
           <h2 className="pb-2.5 font-montserrat text-5xl font-bold text-web">
             Web.
           </h2>
-          <h4 className="pb-2.5 font-montserrat text-xl capitalize text-[#444]">
+          <h3 className="pb-2.5 font-montserrat text-xl capitalize text-[#444]">
             Compete with the big dogs
-          </h4>
+          </h3>
           <p className="pb-5 font-openSans leading-6 text-sm text-body">
             Whether you’re a start-up or an industry leader, the Internet helps
             to level the playing field. If you’re not taking advantage of that,
@@ -89,9 +89,9 @@ export default async function HomePage() {
           <h2 className="pb-2.5 font-montserrat text-5xl font-bold text-print">
             Print.
           </h2>
-          <h4 className="pb-2.5 font-montserrat text-xl  capitalize text-[#444]">
+          <h3 className="pb-2.5 font-montserrat text-xl  capitalize text-[#444]">
             Use Our Trees Wisely
-          </h4>
+          </h3>
           <p className="pb-5 font-openSans leading-6 text-sm text-body">
             From business cards to billboards, a brand represents the heart and
             soul of your product or service. Don’t just print what you make.
