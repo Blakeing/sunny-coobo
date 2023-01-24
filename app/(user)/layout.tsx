@@ -23,7 +23,7 @@ export default function RootLayout({
     >
       <body>
         <header className="font-openSans">Header</header>
-        <div className="font-montserrat">Banner</div>
+        <p className="font-montserrat">Banner</p>
         {children}
       </body>
     </html>
