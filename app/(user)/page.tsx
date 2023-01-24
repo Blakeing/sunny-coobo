@@ -35,7 +35,7 @@ export default async function HomePage() {
   const posts = await client.fetch(query);
   return (
     <main className="flex min-h-screen flex-col items-center justify-center">
-      <section className="grid-col-1 mt-16 grid max-w-5xl gap-4 px-10 lg:grid-cols-2">
+      <section className="grid-col-1 mt-16 grid max-w-7xl gap-[3vw] px-10 lg:grid-cols-2">
         <div className="flex flex-col justify-center">
           <h2 className="pb-2.5 font-montserrat text-5xl font-bold text-web">
             Web.
@@ -66,7 +66,7 @@ export default async function HomePage() {
           </svg>
         </div>
       </section>
-      <section className="grid-col-1 mt-16 grid max-w-7xl gap-4 px-10 lg:grid-cols-2">
+      <section className="grid-col-1 mt-16 grid max-w-7xl gap-[3vw] px-10 lg:grid-cols-2">
         <div className="relative flex justify-center">
           <Image
             className="z-10 scale-x-[-1]"
