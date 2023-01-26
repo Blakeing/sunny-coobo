@@ -1,7 +1,6 @@
 import { groq } from "next-sanity";
-import { client } from "../../../../lib/sanity.client";
+import { client } from "@lib/sanity.client";
 import { PortableText } from "@portabletext/react";
-import { useMemo } from "react";
 
 type Props = {
   params: {

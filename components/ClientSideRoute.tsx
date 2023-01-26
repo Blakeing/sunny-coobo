@@ -5,11 +5,17 @@ import Link from "next/link";
 function ClientSideRoute({
   children,
   route,
+  className,
 }: {
   children: React.ReactNode;
   route: string;
+  className?: string;
 }) {
-  return <Link href={route}>{children}</Link>;
+  return (
+    <Link className={className} href={route}>
+      {children}
+    </Link>
+  );
 }
 
 export default ClientSideRoute;

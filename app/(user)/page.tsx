@@ -1,12 +1,12 @@
 import { previewData } from "next/headers";
 import { groq } from "next-sanity";
-import { client } from "../../lib/sanity.client";
-import PreviewSuspense from "../../components/PreviewSuspense";
-import BlogList from "../../components/BlogList";
-import PreviewBlogList from "../../components/PreviewBlogList";
+import { client } from "@lib/sanity.client";
+import PreviewSuspense from "@components/PreviewSuspense";
+import BlogList from "@components/BlogList";
+import PreviewBlogList from "@components/PreviewBlogList";
 import Image from "next/image";
-import web from "../../public/bg_web_dog.webp";
-import print from "../../public/print-landing.png";
+import web from "@public/bg_web_dog.webp";
+import print from "@public/print-landing.png";
 
 const query = groq`*[_type == "post"] {
     ...,
