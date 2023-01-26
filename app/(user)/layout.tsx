@@ -1,6 +1,7 @@
 import "../../styles/globals.css";
 import { Montserrat, Open_Sans } from "@next/font/google";
 import clsx from "clsx";
+import Footer from "../../components/Footer";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -23,8 +24,8 @@ export default function RootLayout({
     >
       <body>
         <header className="font-openSans">Header</header>
-        <p className="font-montserrat">Banner</p>
         {children}
+        <Footer />
       </body>
     </html>
   );

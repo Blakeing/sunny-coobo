@@ -1,5 +1,7 @@
 import { groq } from "next-sanity";
 import { client } from "../../../../lib/sanity.client";
+import { PortableText } from "@portabletext/react";
+import { useMemo } from "react";
 
 type Props = {
   params: {
@@ -32,10 +34,23 @@ async function Post({ params: { slug } }: Props) {
   const post = await client.fetch(query, { slug });
 
   return (
-    <article>
-      <h1>{post.title}</h1>
-      <h1>{post.author.name}</h1>
-    </article>
+    <div className="relative overflow-hidden bg-white py-16">
+      <div className="relative px-6 lg:px-8">
+        <div className="mx-auto max-w-prose text-lg">
+          <h1>
+            <span className=" block text-center text-3xl font-bold leading-8 tracking-tight text-gray-900 sm:text-4xl">
+              {post.title}
+            </span>
+            <span className="block mt-2 text-center text-lg font-semibold text-coobo">
+              {post.author.name}
+            </span>
+          </h1>
+        </div>
+        <div className="prose prose-lg prose-coobo mx-auto mt-6 text-gray-500">
+          <PortableText value={post.body} />
+        </div>
+      </div>
+    </div>
   );
 }
 

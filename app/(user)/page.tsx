@@ -37,18 +37,16 @@ export default async function HomePage() {
     <main className="flex min-h-screen flex-col items-center justify-center">
       <section className="grid-col-1 mt-16 grid max-w-7xl gap-[3vw] px-10 lg:grid-cols-2">
         <div className="flex flex-col justify-center">
-          <h2 className="pb-2.5 font-montserrat text-5xl font-bold text-web">
-            Web.
-          </h2>
-          <h3 className="pb-2.5 font-montserrat text-xl capitalize text-[#444]">
+          <h2 className="pb-2.5 text-5xl font-bold text-web">Web.</h2>
+          <h3 className="pb-2.5 text-xl capitalize text-[#444]">
             Compete with the big dogs
           </h3>
-          <p className="pb-5 font-openSans leading-6 text-sm text-body">
+          <p className="pb-5  leading-6 text-sm text-body">
             Whether you’re a start-up or an industry leader, the Internet helps
             to level the playing field. If you’re not taking advantage of that,
             your competition thanks you.
           </p>
-          <a className="font-montserrat font-bold uppercase tracking-wide text-web underline underline-offset-4">
+          <a className="font-bold uppercase tracking-wide text-web underline underline-offset-4">
             Whoof!
           </a>
         </div>
@@ -66,6 +64,7 @@ export default async function HomePage() {
           </svg>
         </div>
       </section>
+
       <section className="grid-col-1 mt-16 grid max-w-7xl gap-[3vw] px-10 lg:grid-cols-2">
         <div className="relative flex justify-center">
           <Image
@@ -86,19 +85,17 @@ export default async function HomePage() {
           </svg>
         </div>
         <div className="flex flex-col justify-center">
-          <h2 className="pb-2.5 font-montserrat text-5xl font-bold text-print">
-            Print.
-          </h2>
-          <h3 className="pb-2.5 font-montserrat text-xl  capitalize text-[#444]">
+          <h2 className="pb-2.5 text-5xl font-bold text-print">Print.</h2>
+          <h3 className="pb-2.5 text-xl  capitalize text-[#444]">
             Use Our Trees Wisely
           </h3>
-          <p className="pb-5 font-openSans leading-6 text-sm text-body">
+          <p className="pb-5  leading-6 text-sm text-body">
             From business cards to billboards, a brand represents the heart and
             soul of your product or service. Don’t just print what you make.
             Elevate why you sell it and why we’re all better for it.
             “Information is cheap. Meaning is expensive.” - George Dyson
           </p>
-          <a className="font-montserrat font-bold uppercase tracking-wide text-print underline underline-offset-4">
+          <a className="font-bold uppercase tracking-wide text-print underline underline-offset-4">
             Print!
           </a>
         </div>
