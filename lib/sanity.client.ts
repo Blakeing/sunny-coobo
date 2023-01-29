@@ -1,12 +1,45 @@
-import { createClient } from "next-sanity";
+import 'server-only'
 
-export const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID;
-export const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET;
-const apiVersion = process.env.NEXT_PUBLIC_SANITY_API_VERSION;
+import { apiVersion, dataset, projectId, useCdn } from 'lib/sanity.api'
+import {
+  homePageQuery,
+  homePageTitleQuery,
+  projectBySlugQuery,
+} from 'lib/sanity.queries'
+import { createClient } from 'next-sanity'
+import type { HomePagePayload, ProjectPayload } from 'types'
 
-export const client = createClient({
-  projectId,
-  dataset,
-  apiVersion,
-  useCdn: false,
-});
+/**
+ * Checks if it's safe to create a client instance, as `@sanity/client` will throw an error if `projectId` is false
+ */
+export const sanityClient = (token?: string) => {
+  return projectId
+    ? createClient({ projectId, dataset, apiVersion, useCdn, token })
+    : null
+}
+
+export async function getProjectBySlug({
+  slug,
+  token,
+}: {
+  slug: string
+  token?: string
+}): Promise<ProjectPayload | undefined> {
+  return await sanityClient(token)?.fetch(projectBySlugQuery, { slug })
+}
+
+export async function getHomePage({
+  token,
+}: {
+  token?: string
+}): Promise<HomePagePayload | undefined> {
+  return await sanityClient(token)?.fetch(homePageQuery)
+}
+
+export async function getHomePageTitle({
+  token,
+}: {
+  token?: string
+}): Promise<string | undefined> {
+  return await sanityClient(token)?.fetch(homePageTitleQuery)
+}
