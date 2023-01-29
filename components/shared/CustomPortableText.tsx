@@ -7,7 +7,7 @@ export function CustomPortableText({
   value,
 }: {
   paragraphClasses?: string
-  value: PortableTextBlock[]
+  value?: PortableTextBlock[]
 }) {
   const components: PortableTextComponents = {
     block: {
