@@ -21,17 +21,15 @@ export default async function IndexRoute() {
   return (
     <>
       {token ? (
-        <>
-          <PreviewSuspense
-            fallback={
-              <PreviewWrapper>
-                <HomePage data={data} />
-              </PreviewWrapper>
-            }
-          >
-            <HomePagePreview token={token} />
-          </PreviewSuspense>
-        </>
+        <PreviewSuspense
+          fallback={
+            <PreviewWrapper>
+              <HomePage data={data} />
+            </PreviewWrapper>
+          }
+        >
+          <HomePagePreview token={token} />
+        </PreviewSuspense>
       ) : (
         <HomePage data={data} />
       )}
