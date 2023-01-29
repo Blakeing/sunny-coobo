@@ -19,16 +19,16 @@ export const sanityClient = (token?: string) => {
     : null
 }
 
-export const client = createClient({
-  projectId,
-  dataset,
-  apiVersion,
-  useCdn,
-})
+// export const client = createClient({
+//   projectId,
+//   dataset,
+//   apiVersion,
+//   useCdn,
+// })
 
-export async function getProjects() {
-  return await client.fetch(projectsQuery)
-}
+// export async function getProjects() {
+//   return await client.fetch(projectsQuery)
+// }
 
 export async function getProjectBySlug({
   slug,

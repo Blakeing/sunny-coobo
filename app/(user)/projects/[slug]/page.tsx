@@ -2,21 +2,21 @@ import { ProjectPage } from 'components/pages/project/ProjectPage'
 import { ProjectPreview } from 'components/pages/project/ProjectPreview'
 import { PreviewSuspense } from 'components/preview/PreviewSuspense'
 import { PreviewWrapper } from 'components/preview/PreviewWrapper'
-import { getProjectBySlug, getProjects, sanityClient } from 'lib/sanity.client'
+import { getProjectBySlug } from 'lib/sanity.client'
 import { getPreviewToken } from 'lib/sanity.server.preview'
 import { notFound } from 'next/navigation'
 
 export const revalidate = 30
 
-export async function generateStaticParams() {
-  const slugs = await getProjects()
+// export async function generateStaticParams() {
+//   const slugs = await getProjects()
 
-  const slugRoutes = slugs.map((slug) => slug.slug.current)
+//   const slugRoutes = slugs.map((slug) => slug.slug.current)
 
-  return slugRoutes.map((slug) => ({
-    slug,
-  }))
-}
+//   return slugRoutes.map((slug) => ({
+//     slug,
+//   }))
+// }
 
 export default async function ProjectSlugRoute({
   params,
