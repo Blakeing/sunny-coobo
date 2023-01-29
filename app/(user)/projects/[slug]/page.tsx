@@ -8,16 +8,6 @@ import { notFound } from 'next/navigation'
 
 export const revalidate = 30
 
-// export async function generateStaticParams() {
-//   const slugs = await getProjects()
-
-//   const slugRoutes = slugs.map((slug) => slug.slug.current)
-
-//   return slugRoutes.map((slug) => ({
-//     slug,
-//   }))
-// }
-
 export default async function ProjectSlugRoute({
   params,
 }: {

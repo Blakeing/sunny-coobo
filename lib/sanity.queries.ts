@@ -15,10 +15,6 @@ export const projectBySlugQuery = groq`
   }
 `
 
-export const projectsQuery = groq`*[_type == "project"] {
-  slug
-}`
-
 export const homePageQuery = groq`
   *[_type == "home"][0]{
     _id, 

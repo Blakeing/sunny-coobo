@@ -5,7 +5,6 @@ import {
   homePageQuery,
   homePageTitleQuery,
   projectBySlugQuery,
-  projectsQuery,
 } from 'lib/sanity.queries'
 import { createClient } from 'next-sanity'
 import type { HomePagePayload, ProjectPayload } from 'types'
@@ -18,17 +17,6 @@ export const sanityClient = (token?: string) => {
     ? createClient({ projectId, dataset, apiVersion, useCdn, token })
     : null
 }
-
-// export const client = createClient({
-//   projectId,
-//   dataset,
-//   apiVersion,
-//   useCdn,
-// })
-
-// export async function getProjects() {
-//   return await client.fetch(projectsQuery)
-// }
 
 export async function getProjectBySlug({
   slug,

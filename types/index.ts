@@ -15,7 +15,7 @@ export interface ProjectPayload {
   client?: string
   coverImage?: Image
   description?: PortableTextBlock[]
-  slug: Slug
+  slug: string
   overview?: PortableTextBlock[]
   site?: string
   tags?: string[]
@@ -27,9 +27,4 @@ export interface HomePagePayload {
   overview?: PortableTextBlock[]
   showcaseProjects?: ShowcaseProject[]
   title?: string
-}
-
-interface Slug {
-  _type: 'slug'
-  current: string
 }
