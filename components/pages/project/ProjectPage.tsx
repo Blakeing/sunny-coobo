@@ -1,5 +1,4 @@
 import { CustomPortableText } from 'components/shared/CustomPortableText'
-import { Header } from 'components/shared/Header'
 import ImageBox from 'components/shared/ImageBox'
 import ScrollUp from 'components/shared/ScrollUp'
 import Link from 'next/link'
@@ -13,9 +12,6 @@ export function ProjectPage({ data }: { data: ProjectPayload }) {
   return (
     <div>
       <div className="mb-20 space-y-6">
-        {/* Header */}
-        <Header title={title} description={overview} />
-
         <div className="rounded-md border">
           {/* Image  */}
           <ImageBox
@@ -24,7 +20,7 @@ export function ProjectPage({ data }: { data: ProjectPayload }) {
             classesWrapper="relative aspect-[16/9]"
           />
 
-          <div className="divide-inherit grid grid-cols-1 divide-y lg:grid-cols-4 lg:divide-y-0 lg:divide-x">
+          <div className="grid grid-cols-1 divide-y divide-inherit lg:grid-cols-4 lg:divide-y-0 lg:divide-x">
             {/* Client */}
             {client && (
               <div className="p-3 lg:p-4">

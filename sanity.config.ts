@@ -1,6 +1,7 @@
 /**
  * This config is used to set up Sanity Studio that's mounted on the `/pages/studio/[[...index]].tsx` route
  */
+import StudioLogo from '@components/global/StudioLogo'
 import { visionTool } from '@sanity/vision'
 import { apiVersion, dataset, previewSecretId, projectId } from 'lib/sanity.api'
 import { previewDocumentNode } from 'plugins/previewPane'
@@ -31,6 +32,11 @@ export default defineConfig({
       project,
       // Objects
     ],
+  },
+  studio: {
+    components: {
+      logo: StudioLogo,
+    },
   },
   plugins: [
     deskTool({
