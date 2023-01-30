@@ -4,6 +4,7 @@ import { Popover, Transition } from '@headlessui/react'
 import logo from '@public/coobo-logo-white.svg'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useScrollDirection } from 'utils/useScrollDirection'
 
 const links = [
   {
@@ -65,8 +66,14 @@ const links = [
 ]
 
 function Header() {
+  const scrollDirection = useScrollDirection()
+
   return (
-    <div className="grid grid-cols-12 gap-2 bg-black p-6">
+    <div
+      className={`sticky  z-10 grid grid-cols-12 gap-2 bg-black p-6 ${
+        scrollDirection === 'down' ? '-top-[121.1px]' : 'top-0'
+      }  transition-all duration-500 ease-in-out`}
+    >
       <div className="col-span-2">
         <Link href="/">
           <Image height={64} width={144} src={logo} alt="Logo" />
