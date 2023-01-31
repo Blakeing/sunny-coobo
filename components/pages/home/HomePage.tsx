@@ -19,25 +19,31 @@ export function HomePage({ data }: { data: HomePagePayload }) {
       {/* Web */}
       <section className="grid-col-1 mt-16 grid max-w-7xl gap-4 px-10 lg:grid-cols-2">
         <div className="flex flex-col justify-center">
-          <h2 className="font-montserrat pb-2.5 text-5xl font-bold text-web">
+          <h2 className="pb-2.5 font-display text-5xl font-bold text-web">
             Web.
           </h2>
-          <h4 className="font-montserrat pb-2.5 text-xl  capitalize text-[#444]">
+          <h4 className="pb-2.5 font-display text-xl  capitalize text-[#444]">
             Compete with the big dogs.
           </h4>
-          <p className="pb-5 font-sans text-body">
+          <p className="pb-5  text-body">
             Whether you’re a start-up or an industry leader, the Internet helps
             to level the playing field. If you’re not taking advantage of that,
             your competition thanks you.
           </p>
-          <a className="font-montserrat font-bold uppercase tracking-wide text-web underline underline-offset-4">
+          <a className="font-display font-bold uppercase tracking-wide text-web underline underline-offset-4">
             Whoof!
           </a>
         </div>
         <div className="relative flex justify-center">
-          <Image className="z-10" alt="Web" src={web} height={420} />
+          <Image
+            className="z-10"
+            alt="Web"
+            src={web}
+            height={420}
+            width={316}
+          />
           <svg
-            className="absolute inset-0 h-full w-full"
+            className="blob-web absolute"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 600 600"
           >
@@ -55,10 +61,11 @@ export function HomePage({ data }: { data: HomePagePayload }) {
             className="z-10 scale-x-[-1]"
             alt="Print"
             src={print}
-            height={420}
+            height={360}
+            width={580}
           />
           <svg
-            className="absolute inset-0 h-full w-full"
+            className="blob-print absolute"
             xmlns="http://www.w3.org/2000/svg"
             width="600"
             height="600"
@@ -71,19 +78,19 @@ export function HomePage({ data }: { data: HomePagePayload }) {
           </svg>
         </div>
         <div className="flex flex-col justify-center">
-          <h2 className="font-montserrat pb-2.5 text-5xl font-bold text-print">
+          <h2 className="pb-2.5 font-display text-5xl font-bold text-print">
             Print.
           </h2>
-          <h4 className="font-montserrat pb-2.5 text-xl  capitalize text-[#444]">
+          <h4 className="pb-2.5 font-display text-xl  capitalize text-[#444]">
             Use Our Trees Wisely
           </h4>
-          <p className="pb-5 font-sans text-body">
+          <p className="pb-5  text-body">
             From business cards to billboards, a brand represents the heart and
             soul of your product or service. Don’t just print what you make.
             Elevate why you sell it and why we’re all better for it.
             “Information is cheap. Meaning is expensive.” - George Dyson
           </p>
-          <a className="font-montserrat font-bold uppercase tracking-wide text-print underline underline-offset-4">
+          <a className="font-display font-bold uppercase tracking-wide text-print underline underline-offset-4">
             Print!
           </a>
         </div>
@@ -91,25 +98,31 @@ export function HomePage({ data }: { data: HomePagePayload }) {
       {/* Brand */}
       <section className="grid-col-1 mt-16 grid max-w-7xl gap-4 px-10 lg:grid-cols-2">
         <div className="flex flex-col justify-center">
-          <h2 className="font-montserrat pb-2.5 text-5xl font-bold text-brand">
+          <h2 className="pb-2.5 font-display text-5xl font-bold text-brand">
             Brand.
           </h2>
-          <h4 className="font-montserrat pb-2.5 text-xl  capitalize text-[#444]">
+          <h4 className="pb-2.5 font-display text-xl  capitalize text-[#444]">
             Is In The Details
           </h4>
-          <p className="pb-5 font-sans text-body">
+          <p className="pb-5  text-body">
             Evolve your brand. It may start with a logo and a color scheme, but
             it will culminate from the principles and ideas that your company
             represents.
           </p>
-          <a className="font-montserrat font-bold uppercase tracking-wide text-brand underline underline-offset-4">
+          <a className="font-display font-bold uppercase tracking-wide text-brand underline underline-offset-4">
             Avoid The Windshield
           </a>
         </div>
         <div className="relative flex justify-center">
-          <Image className="z-10" alt="Brand" src={brand} height={420} />
+          <Image
+            className="z-10 scale-x-[-1]"
+            alt="Brand"
+            src={brand}
+            height={430}
+            width={347}
+          />
           <svg
-            className="absolute inset-0 h-full w-full"
+            className="blob-brand absolute"
             xmlns="http://www.w3.org/2000/svg"
             width="600"
             height="600"
@@ -129,10 +142,11 @@ export function HomePage({ data }: { data: HomePagePayload }) {
             className="z-10"
             alt="Marketing"
             src={marketing}
-            height={420}
+            height={380}
+            width={380}
           />
           <svg
-            className="absolute inset-0 h-full w-full"
+            className="blob-marketing absolute"
             xmlns="http://www.w3.org/2000/svg"
             width="600"
             height="600"
@@ -145,18 +159,18 @@ export function HomePage({ data }: { data: HomePagePayload }) {
           </svg>
         </div>
         <div className="flex flex-col justify-center">
-          <h2 className="font-montserrat pb-2.5 text-5xl font-bold text-marketing">
+          <h2 className="pb-2.5 font-display text-5xl font-bold text-marketing">
             Marketing.
           </h2>
-          <h4 className="font-montserrat pb-2.5 text-xl  capitalize text-[#444]">
+          <h4 className="pb-2.5 font-display text-xl  capitalize text-[#444]">
             Optimize Your Splash
           </h4>
-          <p className="pb-5 font-sans text-body">
+          <p className="pb-5  text-body">
             Technology has revolutionized the way we market to our customers.
             Using the right mix of digital marketing, advertising and public
             relations, you can reach your target audience more efficiently.
           </p>
-          <a className="font-montserrat font-bold uppercase tracking-wide text-marketing underline underline-offset-4">
+          <a className="font-display font-bold uppercase tracking-wide text-marketing underline underline-offset-4">
             &quot;Marco?&quot;
           </a>
         </div>
@@ -164,24 +178,30 @@ export function HomePage({ data }: { data: HomePagePayload }) {
       {/* Video */}
       <section className="grid-col-1 mt-16 grid max-w-7xl gap-4 px-10 lg:grid-cols-2">
         <div className="flex flex-col justify-center">
-          <h2 className="font-montserrat pb-2.5 text-5xl font-bold text-video">
+          <h2 className="pb-2.5 font-display text-5xl font-bold text-video">
             Video.
           </h2>
-          <h4 className="font-montserrat pb-2.5 text-xl  capitalize text-[#444]">
+          <h4 className="pb-2.5 font-display text-xl  capitalize text-[#444]">
             Be Moved
           </h4>
-          <p className="pb-5 font-sans text-body">
+          <p className="pb-5  text-body">
             Video on a landing page has been known to increase conversion rates
             by over 80%. Life doesn’t sit still, so why should your content?
           </p>
-          <a className="font-montserrat font-bold uppercase tracking-wide text-video underline underline-offset-4">
+          <a className="font-display font-bold uppercase tracking-wide text-video underline underline-offset-4">
             Giddy-Up!
           </a>
         </div>
         <div className="relative flex justify-center">
-          <Image className="z-10" alt="Video" src={video} height={420} />
+          <Image
+            className="z-10"
+            alt="Video"
+            src={video}
+            height={336}
+            width={410}
+          />
           <svg
-            className="absolute inset-0 h-full w-full"
+            className="blob-video absolute"
             xmlns="http://www.w3.org/2000/svg"
             width="600"
             height="600"

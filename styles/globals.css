@@ -11,4 +11,40 @@
   h6 {
     font-family: var(--font-montserrat);
   }
+
+  .blob-print {
+    width: 140%;
+    height: 140%;
+    top: -100px;
+    left: -50px;
+  }
+
+  .blob-brand {
+    width: 145%;
+    height: 145%;
+    top: -110px;
+    left: -30px;
+  }
+
+  .blob-web {
+    left: -60px;
+    top: 0;
+    width: 130%;
+    height: 100%;
+  }
+
+  .blob-marketing {
+    width: 150%;
+    height: 150%;
+    top: -80px;
+    left: -90px;
+  }
+
+  .blob-video {
+    width: 120%;
+    left: -20px;
+    top: 0;
+    left: 0;
+    height: 100%;
+  }
 }
