@@ -15,26 +15,26 @@ export function HomePage({ data }: { data: HomePagePayload }) {
   const { overview, showcaseProjects, title } = data || {}
 
   return (
-    <div className="space-y-20">
+    <div className="mx-auto max-w-7xl space-y-16 ">
       {/* Web */}
-      <section className="grid-col-1 mt-16 grid max-w-7xl gap-4 px-10 lg:grid-cols-2">
+      <section className="grid-col-1 grid gap-12  lg:grid-cols-2">
         <div className="flex flex-col justify-center">
           <h2 className="pb-2.5 font-display text-5xl font-bold text-web">
             Web.
           </h2>
           <h4 className="pb-2.5 font-display text-xl  capitalize text-[#444]">
-            Compete with the big dogs.
+            Compete with the big dogs
           </h4>
           <p className="pb-5  text-body">
             Whether you’re a start-up or an industry leader, the Internet helps
             to level the playing field. If you’re not taking advantage of that,
             your competition thanks you.
           </p>
-          <a className="font-display font-bold uppercase tracking-wide text-web underline underline-offset-4">
+          <a className="font-display text-sm font-bold uppercase tracking-widest text-web underline decoration-2 underline-offset-8">
             Whoof!
           </a>
         </div>
-        <div className="relative flex justify-center">
+        <div className="relative flex   justify-center  ">
           <Image
             className="z-10"
             alt="Web"
@@ -42,8 +42,9 @@ export function HomePage({ data }: { data: HomePagePayload }) {
             height={420}
             width={316}
           />
+
           <svg
-            className="blob-web absolute"
+            className="absolute inset-0  h-full w-full"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 600 600"
           >
@@ -55,17 +56,17 @@ export function HomePage({ data }: { data: HomePagePayload }) {
         </div>
       </section>
       {/* Print */}
-      <section className="grid-col-1 mt-16 grid max-w-7xl gap-4 px-10 lg:grid-cols-2">
-        <div className="relative flex justify-center">
+      <section className="grid-col-1  grid  gap-12 lg:grid-cols-2">
+        <div className="relative flex  justify-center">
           <Image
-            className="z-10 scale-x-[-1]"
+            className=" z-10  scale-x-[-1]"
             alt="Print"
             src={print}
             height={360}
             width={580}
           />
           <svg
-            className="blob-print absolute"
+            className="blob-print absolute inset-0  h-full w-full"
             xmlns="http://www.w3.org/2000/svg"
             width="600"
             height="600"
@@ -90,13 +91,13 @@ export function HomePage({ data }: { data: HomePagePayload }) {
             Elevate why you sell it and why we’re all better for it.
             “Information is cheap. Meaning is expensive.” - George Dyson
           </p>
-          <a className="font-display font-bold uppercase tracking-wide text-print underline underline-offset-4">
+          <a className="font-display text-sm font-bold uppercase tracking-widest text-print underline decoration-2 underline-offset-8">
             Print!
           </a>
         </div>
       </section>
       {/* Brand */}
-      <section className="grid-col-1 mt-16 grid max-w-7xl gap-4 px-10 lg:grid-cols-2">
+      <section className="grid-col-1  grid  gap-12 lg:grid-cols-2">
         <div className="flex flex-col justify-center">
           <h2 className="pb-2.5 font-display text-5xl font-bold text-brand">
             Brand.
@@ -109,23 +110,21 @@ export function HomePage({ data }: { data: HomePagePayload }) {
             it will culminate from the principles and ideas that your company
             represents.
           </p>
-          <a className="font-display font-bold uppercase tracking-wide text-brand underline underline-offset-4">
+          <a className="font-display text-sm font-bold uppercase tracking-widest text-brand underline decoration-2 underline-offset-8">
             Avoid The Windshield
           </a>
         </div>
-        <div className="relative flex justify-center">
+        <div className="relative flex  justify-center">
           <Image
-            className="z-10 scale-x-[-1]"
+            className=" z-10   scale-x-[-1]"
             alt="Brand"
             src={brand}
             height={430}
             width={347}
           />
           <svg
-            className="blob-brand absolute"
+            className="blob-brand absolute inset-0  h-full w-full"
             xmlns="http://www.w3.org/2000/svg"
-            width="600"
-            height="600"
             viewBox="0 0 600 600"
           >
             <path
@@ -136,20 +135,18 @@ export function HomePage({ data }: { data: HomePagePayload }) {
         </div>
       </section>
       {/* Marketing */}
-      <section className="grid-col-1 mt-16 grid max-w-7xl gap-4 px-10 lg:grid-cols-2">
-        <div className="relative flex justify-center">
+      <section className="grid-col-1  grid  gap-12 lg:grid-cols-2">
+        <div className="relative flex  justify-center">
           <Image
-            className="z-10"
+            className=" z-10  "
             alt="Marketing"
             src={marketing}
             height={380}
             width={380}
           />
           <svg
-            className="blob-marketing absolute"
+            className="blob-marketing  absolute inset-0 h-full w-full "
             xmlns="http://www.w3.org/2000/svg"
-            width="600"
-            height="600"
             viewBox="0 0 600 600"
           >
             <path
@@ -170,13 +167,13 @@ export function HomePage({ data }: { data: HomePagePayload }) {
             Using the right mix of digital marketing, advertising and public
             relations, you can reach your target audience more efficiently.
           </p>
-          <a className="font-display font-bold uppercase tracking-wide text-marketing underline underline-offset-4">
+          <a className="font-display text-sm font-bold uppercase tracking-widest text-marketing underline decoration-2 underline-offset-8">
             &quot;Marco?&quot;
           </a>
         </div>
       </section>
       {/* Video */}
-      <section className="grid-col-1 mt-16 grid max-w-7xl gap-4 px-10 lg:grid-cols-2">
+      <section className="grid-col-1  grid  gap-12 lg:grid-cols-2">
         <div className="flex flex-col justify-center">
           <h2 className="pb-2.5 font-display text-5xl font-bold text-video">
             Video.
@@ -188,20 +185,20 @@ export function HomePage({ data }: { data: HomePagePayload }) {
             Video on a landing page has been known to increase conversion rates
             by over 80%. Life doesn’t sit still, so why should your content?
           </p>
-          <a className="font-display font-bold uppercase tracking-wide text-video underline underline-offset-4">
+          <a className="font-display text-sm font-bold uppercase tracking-widest text-video underline decoration-2 underline-offset-8">
             Giddy-Up!
           </a>
         </div>
         <div className="relative flex justify-center">
           <Image
-            className="z-10"
+            className=" z-10  "
             alt="Video"
             src={video}
             height={336}
             width={410}
           />
           <svg
-            className="blob-video absolute"
+            className="blob-video absolute inset-0  h-full w-full"
             xmlns="http://www.w3.org/2000/svg"
             width="600"
             height="600"

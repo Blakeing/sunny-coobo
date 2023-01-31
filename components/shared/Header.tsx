@@ -69,7 +69,7 @@ function Header() {
   const scrollDirection = useScrollDirection()
 
   return (
-    <div
+    <header
       className={`sticky  z-20 grid grid-cols-12 gap-2 bg-black p-6 ${
         scrollDirection === 'down' ? '-top-[121.1px]' : 'top-0'
       }  transition-all duration-500 ease-in-out`}
@@ -114,7 +114,7 @@ function Header() {
       <div className="col-span-2 flex items-center">
         <p className="text-sm font-bold text-white ">Login</p>
       </div>
-    </div>
+    </header>
   )
 }
 

@@ -30,7 +30,9 @@ export default function RootLayout({
       <body>
         {token && <PreviewBanner />}
         <Header />
-        <div className="mt-20 flex-grow px-4 md:px-16 lg:px-32">{children}</div>
+        <main className="mt-20 flex-grow px-4 md:px-16 lg:px-32">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>
