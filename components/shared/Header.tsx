@@ -70,7 +70,7 @@ function Header() {
 
   return (
     <div
-      className={`sticky  z-10 grid grid-cols-12 gap-2 bg-black p-6 ${
+      className={`sticky  z-20 grid grid-cols-12 gap-2 bg-black p-6 ${
         scrollDirection === 'down' ? '-top-[121.1px]' : 'top-0'
       }  transition-all duration-500 ease-in-out`}
     >

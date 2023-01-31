@@ -15,6 +15,9 @@ module.exports = {
         web: '#b33232',
         print: '#45b3a0',
         coobo: '#ec5325',
+        video: '#744177',
+        marketing: '#ea6330',
+        brand: '#3686b5',
       },
       fontFamily: {
         display: ['var(--font-montserrat)', ...fontFamily.sans],
