@@ -157,7 +157,7 @@ export function HomePage({ data }: { data: HomePagePayload }) {
             relations, you can reach your target audience more efficiently.
           </p>
           <a className="font-montserrat font-bold uppercase tracking-wide text-marketing underline underline-offset-4">
-            "Marco?"
+            &quot;Marco?&quot;
           </a>
         </div>
       </section>
