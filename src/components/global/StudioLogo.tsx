@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import logo from '@/public/coobo-logo-white.svg'
+import logo from '../../../public/coobo-logo-white.svg'
 
 function StudioLogo() {
   return (

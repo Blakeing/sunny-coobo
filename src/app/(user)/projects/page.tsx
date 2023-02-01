@@ -1,5 +1,3 @@
-
-
 function ProjectsRoute() {
   return <div>ProjectsRoute</div>
 }
