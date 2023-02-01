@@ -1,17 +1,23 @@
 /**
  * This config is used to set up Sanity Studio that's mounted on the `/pages/studio/[[...index]].tsx` route
  */
-import StudioLogo from '@components/global/StudioLogo'
 import { visionTool } from '@sanity/vision'
-import { apiVersion, dataset, previewSecretId, projectId } from 'lib/sanity.api'
-import { previewDocumentNode } from 'plugins/previewPane'
-import { productionUrl } from 'plugins/productionUrl'
-import { pageStructure, singletonPlugin } from 'plugins/settings'
 import { defineConfig } from 'sanity'
 import { deskTool } from 'sanity/desk'
 import { unsplashImageAsset } from 'sanity-plugin-asset-source-unsplash'
-import project from 'schemas/documents/project'
-import home from 'schemas/singletons/home'
+
+import StudioLogo from '@/components/global/StudioLogo'
+import {
+  apiVersion,
+  dataset,
+  previewSecretId,
+  projectId,
+} from '@/lib/sanity.api'
+import { previewDocumentNode } from '@/plugins/previewPane'
+import { productionUrl } from '@/plugins/productionUrl'
+import { pageStructure, singletonPlugin } from '@/plugins/settings'
+import project from '@/schemas/documents/project'
+import home from '@/schemas/singletons/home'
 
 const title = process.env.NEXT_PUBLIC_SANITY_PROJECT_TITLE || 'Coobo Media'
 

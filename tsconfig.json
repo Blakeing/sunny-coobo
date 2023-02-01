@@ -1,11 +1,10 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
-    "target": "ESNext",
+    "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": false,
+    "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
@@ -20,12 +19,9 @@
         "name": "next"
       }
     ],
+    "baseUrl": ".",
     "paths": {
-      "@lib/*": ["lib/*"],
-      "@utils/*": ["utils/*"],
-      "@config/*": ["config/*"],
-      "@assets/*": ["assets/*"],
-      "@components/*": ["components/*"],
+      "@/*": ["./src/*"],
       "@public/*": ["public/*"]
     }
   },
