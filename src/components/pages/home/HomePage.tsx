@@ -33,9 +33,12 @@ export function HomePage({ data }: { data: HomePagePayload }) {
               helps to level the playing field. If you’re not taking advantage
               of that, your competition thanks you.
             </p>
-            <a className="font-display text-sm font-bold uppercase tracking-widest text-web underline decoration-2 underline-offset-8">
+            <Link
+              href=""
+              className="font-display text-sm font-bold uppercase tracking-widest text-web underline decoration-2 underline-offset-8"
+            >
               Whoof!
-            </a>
+            </Link>
           </div>
           <div className="relative flex justify-center  ">
             <Image
@@ -94,9 +97,12 @@ export function HomePage({ data }: { data: HomePagePayload }) {
               make. Elevate why you sell it and why we’re all better for it.
               “Information is cheap. Meaning is expensive.” - George Dyson
             </p>
-            <a className="font-display text-sm font-bold uppercase tracking-widest text-print underline decoration-2 underline-offset-8">
+            <Link
+              href=""
+              className="font-display text-sm font-bold uppercase tracking-widest text-print underline decoration-2 underline-offset-8"
+            >
               Print!
-            </a>
+            </Link>
           </div>
         </section>
         {/* Brand */}
@@ -113,9 +119,12 @@ export function HomePage({ data }: { data: HomePagePayload }) {
               but it will culminate from the principles and ideas that your
               company represents.
             </p>
-            <a className="font-display text-sm font-bold uppercase tracking-widest text-brand underline decoration-2 underline-offset-8">
+            <Link
+              href=""
+              className="font-display text-sm font-bold uppercase tracking-widest text-brand underline decoration-2 underline-offset-8"
+            >
               Avoid The Windshield
-            </a>
+            </Link>
           </div>
           <div className="relative flex  justify-center">
             <Image
@@ -170,9 +179,12 @@ export function HomePage({ data }: { data: HomePagePayload }) {
               Using the right mix of digital marketing, advertising and public
               relations, you can reach your target audience more efficiently.
             </p>
-            <a className="font-display text-sm font-bold uppercase tracking-widest text-marketing underline decoration-2 underline-offset-8">
+            <Link
+              href=""
+              className="font-display text-sm font-bold uppercase tracking-widest text-marketing underline decoration-2 underline-offset-8"
+            >
               &quot;Marco?&quot;
-            </a>
+            </Link>
           </div>
         </section>
         {/* Video */}
@@ -189,9 +201,12 @@ export function HomePage({ data }: { data: HomePagePayload }) {
               rates by over 80%. Life doesn’t sit still, so why should your
               content?
             </p>
-            <a className="font-display text-sm font-bold uppercase tracking-widest text-video underline decoration-2 underline-offset-8">
+            <Link
+              href=""
+              className="font-display text-sm font-bold uppercase tracking-widest text-video underline decoration-2 underline-offset-8"
+            >
               Giddy-Up!
-            </a>
+            </Link>
           </div>
           <div className="relative flex justify-center">
             <Image

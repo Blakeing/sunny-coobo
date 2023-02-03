@@ -1,4 +1,4 @@
-import video from '@public/video-tv.webp'
+import video from '@public/video2.webp'
 import Image from 'next/image'
 
 import { Button } from '@/components/ui/Button'
@@ -13,17 +13,16 @@ function VideoRoute() {
               Video.
             </h1>
             <h2 className="mb-2 font-display text-3xl italic text-white">
-              Use our trees wisely
+              Be Moved
             </h2>
             <p className="mb-10 max-w-lg text-white">
-              From business cards to billboards, a brand represents the heart
-              and soul of your product or service. Don’t just video what you
-              make. Elevate why you sell it and why we’re all better for it.
-              “Information is cheap. Meaning is expensive.” - George Dyson
+              Video on a landing page has been known to increase conversion
+              rates by over 80%. Life doesn’t sit still, so why should your
+              content?
             </p>
             <div className="flex flex-wrap gap-5">
               <Button>Learn More</Button>
-              <Button intent="secondary">Portfolio</Button>
+              <Button intent="secondary">Examples</Button>
             </div>
           </div>
           <div className="relative">
@@ -40,79 +39,78 @@ function VideoRoute() {
         <div className="mx-auto grid grid-cols-1 gap-10  md:grid-cols-2 lg:grid-cols-4 ">
           <div>
             <h3 className="mb-2 text-xl font-bold text-accentLight">
-              Brochures/Flyers
+              Explainer Videos
             </h3>
             <p className="text-body">
-              Looking for a tangible way to promote your business? Flyers and
-              brochures are an effective way to introduce your business, create
-              positive press or simply tell your audience what they are missing
-              out on.
+              Visual storytelling has been regarded as one of the most
+              successful methods of resonating your message to potential
+              clients. No matter how complex the subject, we know how to
+              formulate and execute a video with clarity
             </p>
           </div>
           <div>
             <h3 className="mb-2 text-xl font-bold text-accentLight">
-              Business Cards
+              Motion Graphics
             </h3>
             <p className="text-body">
-              Get your foot in the door and your business card in their hand. A
-              well-designed business card will help give a great first
-              impression, showcase what your company is capable of, and in turn,
-              create more opportunities for you!
+              As the average attention span duration continues to decline year
+              after year, grasping and holding the attention of viewers has
+              become increasingly difficult. Motion Graphics seek to bridge that
+              gap using methods of movable graphic design, conveying your
+              message through a series of animation and text.
             </p>
           </div>
           <div>
             <h3 className="mb-2 text-xl font-bold text-accentLight">
-              Vehicle Wraps
+              Drone Footage
             </h3>
             <p className="text-body">
-              Kill two birds with one stone by showcasing your company’s
-              expertise and protecting your vehicle from unwanted scratches.
-              Vehicle wraps are a creative way to let your potential clients
-              know that you are local and ready for action. Our visual displays
-              will attract potential clients.
+              Let us be your eyes in the sky. From commercial projects to local
+              events, we have you covered from above.
             </p>
           </div>
           <div>
             <h3 className="mb-2 text-xl font-bold text-accentLight">
-              Booths & Banners
+              Advertising
             </h3>
             <p className="text-body">
-              Display advertising can be extremely helpful when promoting your
-              brand in a physical space. We create eye-catching visuals that
-              will generate conversation and take the stress out of event
-              marketing. you.
+              According to a study from Forbes.com, viewers retain 95% of a
+              message when they watch it on video, compared to 10% when reading
+              it in a text. The increase in click-through rate with video is as
+              high as 96%, and videos are shared 1200% more times than links and
+              text combined. There has never been a better time to make the
+              transition to video advertising.
             </p>
           </div>
           <div>
             <h3 className="mb-2 text-xl font-bold text-accentLight">
-              Billboard Advertising
+              Time-lapse
             </h3>
             <p className="text-body">
-              When was the last time you saw a billboard? Probably today. Coobo
-              Media will make your message the billboard of tomorrow. Our
-              designers will help your business transcend the marketing white
-              noise with our head turning ad specs.
+              There may be nothing more satisfying than seeing a project’s
+              evolution from start to finish, but who has the time to sit there
+              and wait? Our video equipment, that’s who.
             </p>
           </div>
           <div>
             <h3 className="mb-2 text-xl font-bold text-accentLight">
-              Packaging
+              Vlog/Podcast
             </h3>
             <p className="text-body">
-              It may be what’s on the inside that counts, but it’s the outside
-              that separates you from the competition. Shelf presence is
-              everything and packaging directly reflects your product’s quality.
-              Let us handle the aesthetics – you won’t be disappointed.
+              As we enter the golden age of podcasts and video blogging, it has
+              never been more convenient for your audience to connect with you
+              on a personal level. Our production team has the capabilities to
+              let your voice be heard through video and audio messaging.
             </p>
           </div>
           <div>
             <h3 className="mb-2 text-xl font-bold text-accentLight">
-              Letterhead/Envelope
+              Instructional Videos
             </h3>
             <p className="text-body">
-              Well-designed letterheads and stationery will give your clients a
-              glimpse of your professionalism and organizational skills. We
-              won’t skimp on the details!
+              Sometimes, you just have to show how to do something rather than
+              tell. Give your audience informative content that they can view at
+              their own pace, allowing the message to resonate naturally.
             </p>
           </div>
         </div>
