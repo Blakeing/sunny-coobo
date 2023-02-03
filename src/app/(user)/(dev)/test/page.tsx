@@ -1,6 +1,7 @@
 'use client'
 
 import { Disclosure, Popover, Transition } from '@headlessui/react'
+import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import {
   ArrowPathIcon,
   Bars3Icon,
@@ -8,17 +9,20 @@ import {
   CalendarIcon,
   ChartBarIcon,
   CursorArrowRaysIcon,
+  FolderIcon,
+  HomeIcon,
+  InboxIcon,
   LifebuoyIcon,
   PhoneIcon,
   PlayIcon,
   ShieldCheckIcon,
   Squares2X2Icon,
+  UsersIcon,
   XMarkIcon,
 } from '@heroicons/react/24/outline'
 import logo from '@public/coobo-logo-white.svg'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useSelectedLayoutSegment } from 'next/navigation'
 import { Fragment } from 'react'
 
 import { useScrollDirection } from '@/utils/useScrollDirection'
@@ -159,29 +163,61 @@ const links = [
 ]
 
 const navigation = [
-  { name: 'Home', href: '/' },
+  { name: 'Dashboard', icon: HomeIcon, current: true, href: '#' },
   {
-    name: 'Services',
+    name: 'Team',
+    icon: UsersIcon,
+    current: false,
     children: [
-      { name: 'Web', href: '/web' },
-      { name: 'Print', href: '/print' },
-      { name: 'Brand', href: '/brand' },
-      { name: 'Marketing', href: '/marketing' },
-      { name: 'Video', href: '/video' },
+      { name: 'Overview', href: '#' },
+      { name: 'Members', href: '#' },
+      { name: 'Calendar', href: '#' },
+      { name: 'Settings', href: '#' },
     ],
   },
   {
-    name: 'About',
-    href: '/about',
+    name: 'Projects',
+    icon: FolderIcon,
+    current: false,
+    children: [
+      { name: 'Overview', href: '#' },
+      { name: 'Members', href: '#' },
+      { name: 'Calendar', href: '#' },
+      { name: 'Settings', href: '#' },
+    ],
   },
   {
-    name: 'Work',
-    href: '/work',
+    name: 'Calendar',
+    icon: CalendarIcon,
+    current: false,
+    children: [
+      { name: 'Overview', href: '#' },
+      { name: 'Members', href: '#' },
+      { name: 'Calendar', href: '#' },
+      { name: 'Settings', href: '#' },
+    ],
   },
-
   {
-    name: 'Contact',
-    href: '/contact',
+    name: 'Documents',
+    icon: InboxIcon,
+    current: false,
+    children: [
+      { name: 'Overview', href: '#' },
+      { name: 'Members', href: '#' },
+      { name: 'Calendar', href: '#' },
+      { name: 'Settings', href: '#' },
+    ],
+  },
+  {
+    name: 'Reports',
+    icon: ChartBarIcon,
+    current: false,
+    children: [
+      { name: 'Overview', href: '#' },
+      { name: 'Members', href: '#' },
+      { name: 'Calendar', href: '#' },
+      { name: 'Settings', href: '#' },
+    ],
   },
 ]
 
@@ -191,9 +227,6 @@ function classNames(...classes) {
 
 export default function Header() {
   const scrollDirection = useScrollDirection()
-  const segment = useSelectedLayoutSegment()
-  console.log(segment)
-
   return (
     <Popover
       className={`fixed z-20 w-full  bg-accent p-6 ${
@@ -201,7 +234,7 @@ export default function Header() {
       }  transition-all duration-500 ease-in-out`}
     >
       <div className="mx-auto max-w-7xl px-6">
-        <div className="flex items-center justify-between md:justify-start md:space-x-10">
+        <div className="flex items-center justify-between py-6 md:justify-start md:space-x-10">
           <div className="flex justify-start gap-10 lg:w-0 lg:flex-1">
             <Link href="/">
               <span className="sr-only">Your Company</span>
@@ -263,33 +296,33 @@ export default function Header() {
       >
         <Popover.Panel
           focus
-          className="absolute right-0 top-0 min-h-screen w-80  origin-top-right transform border-l-8 border-white bg-coobo  transition "
+          className="absolute right-0 top-0 min-h-screen w-80 origin-top-right transform bg-coobo  transition "
         >
           <div className="flex flex-grow flex-col overflow-y-auto   pt-5 pb-4">
-            <div className="flex flex-shrink-0 items-center justify-end px-4">
-              <div className="-mr-2">
+            <div className="flex flex-shrink-0 items-center justify-between px-4">
+              <div className="-ml-2">
                 <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-coobo">
                   <span className="sr-only">Close menu</span>
                   <XMarkIcon className="h-6 w-6" aria-hidden="true" />
                 </Popover.Button>
               </div>
             </div>
-            <div className="mt-5 flex  flex-grow flex-col px-6">
+            <div className="mt-5 flex flex-grow flex-col">
               <nav className="flex-1 space-y-1  px-2" aria-label="Sidebar">
                 {navigation.map((item) =>
                   !item.children ? (
                     <div key={item.name}>
-                      <Link
-                        href={item.href}
+                      <a
+                        href="#"
                         className={classNames(
-                          item.href === `/${segment}`
+                          item.current
                             ? 'bg-gray-100 text-gray-900'
-                            : 'text-white',
-                          'group flex w-full items-center rounded-md py-2 pl-2 font-display text-2xl font-bold'
+                            : 'bg-white text-gray-600 hover:bg-gray-50 hover:text-gray-900',
+                          'group flex w-full items-center rounded-md py-2 pl-2 text-sm font-medium'
                         )}
                       >
                         {item.name}
-                      </Link>
+                      </a>
                     </div>
                   ) : (
                     <Disclosure as="div" key={item.name} className="space-y-1">
@@ -297,17 +330,19 @@ export default function Header() {
                         <>
                           <Disclosure.Button
                             className={classNames(
-                              item.href === `/${segment}`
+                              item.current
                                 ? 'bg-gray-100 text-gray-900'
-                                : 'text-white',
-                              'group flex w-full items-center rounded-md py-2 pl-2 pr-1 text-left font-display text-2xl font-bold focus:outline-none focus:ring-2 focus:ring-accent'
+                                : 'bg-white text-gray-600 hover:bg-gray-50 hover:text-gray-900',
+                              'group flex w-full items-center rounded-md py-2 pl-2 pr-1 text-left text-sm font-medium focus:outline-none focus:ring-2 focus:ring-accent'
                             )}
                           >
                             <span className="flex-1">{item.name}</span>
                             <svg
                               className={classNames(
-                                open ? 'rotate-90 opacity-80' : ' text-white ',
-                                'ml-3 h-5 w-5 flex-shrink-0 transform transition-colors duration-150 ease-in-out group-hover:text-accent'
+                                open
+                                  ? 'rotate-90 text-gray-400'
+                                  : 'text-gray-300',
+                                'ml-3 h-5 w-5 flex-shrink-0 transform transition-colors duration-150 ease-in-out group-hover:text-gray-400'
                               )}
                               viewBox="0 0 20 20"
                               aria-hidden="true"
@@ -322,14 +357,9 @@ export default function Header() {
                             {item.children.map((subItem) => (
                               <Disclosure.Button
                                 key={subItem.name}
-                                as={Link}
+                                as="a"
                                 href={subItem.href}
-                                className={classNames(
-                                  subItem.href === `/${segment}`
-                                    ? 'bg-white text-black'
-                                    : 'bg-none text-white',
-                                  'group flex w-full items-center rounded-md py-2 pl-11 pr-2 text-xl font-bold  hover:bg-gray-50 hover:text-gray-900'
-                                )}
+                                className="group flex w-full items-center rounded-md py-2 pl-11 pr-2 text-sm font-medium text-white hover:bg-gray-50 hover:text-gray-900"
                               >
                                 {subItem.name}
                               </Disclosure.Button>
