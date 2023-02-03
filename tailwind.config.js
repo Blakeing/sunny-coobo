@@ -18,6 +18,9 @@ module.exports = {
         video: '#744177',
         marketing: '#ea6330',
         brand: '#3686b5',
+        accent: '#252525',
+        accentLight: '#444',
+        accentGray: '#b7b7b7',
       },
       fontFamily: {
         display: ['var(--font-montserrat)', ...fontFamily.sans],
@@ -29,5 +32,6 @@ module.exports = {
     require('@tailwindcss/aspect-ratio'),
     require('@tailwindcss/typography'),
     require('@headlessui/tailwindcss'),
+    require('@tailwindcss/forms'),
   ],
 }

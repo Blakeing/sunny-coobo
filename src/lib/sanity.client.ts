@@ -6,6 +6,7 @@ import { apiVersion, dataset, projectId, useCdn } from '@/lib/sanity.api'
 import {
   homePageQuery,
   homePageTitleQuery,
+  petQuery,
   projectBySlugQuery,
 } from '@/lib/sanity.queries'
 import type { HomePagePayload, ProjectPayload } from '@/types'

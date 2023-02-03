@@ -16,6 +16,7 @@ import {
 import { previewDocumentNode } from '@/plugins/previewPane'
 import { productionUrl } from '@/plugins/productionUrl'
 import { pageStructure, singletonPlugin } from '@/plugins/settings'
+import { schemaTypes } from '@/schemas'
 import project from '@/schemas/documents/project'
 import home from '@/schemas/singletons/home'
 
@@ -30,14 +31,7 @@ export default defineConfig({
   title,
   schema: {
     // If you want more content types, you can add them to this array
-    types: [
-      // Singletons
-      home,
-      // Documents
-
-      project,
-      // Objects
-    ],
+    types: schemaTypes,
   },
   studio: {
     components: {
