@@ -6,9 +6,9 @@ import { Button } from '@/components/ui/Button'
 function WebRoute() {
   return (
     <>
-      <section className=" w-full   bg-web  ">
-        <div className="relative mx-auto grid max-w-7xl grid-cols-2 py-16">
-          <div>
+      <section className=" w-full bg-web  ">
+        <div className=" relative mx-auto grid max-w-7xl grid-cols-1 px-6 pt-[133.29px] pb-16 md:grid-cols-2 md:pt-[176px] lg:px-8">
+          <div className="">
             <h1 className="mb-2 font-display text-6xl font-bold text-white  ">
               Web.
             </h1>
@@ -25,13 +25,13 @@ function WebRoute() {
               <Button intent="secondary">Portfolio</Button>
             </div>
           </div>
-          <div className="absolute right-0 top-0 w-1/3">
-            <Image className="z-10" alt="Web" src={web} />
+          <div className="relative">
+            <Image className="z-10 object-contain" fill alt="Web" src={web} />
           </div>
         </div>
       </section>
-      <section className=" w-full  ">
-        <div className="mx-auto grid max-w-7xl grid-cols-4 gap-10 py-16">
+      <section className=" mx-auto w-full max-w-7xl py-16 px-6 lg:px-8">
+        <div className="mx-auto grid grid-cols-1 gap-10  md:grid-cols-2 lg:grid-cols-4 ">
           <div>
             <h3 className="mb-2 text-xl font-bold text-accentLight">
               Site Design
@@ -83,12 +83,12 @@ function WebRoute() {
       </section>
       <section className="w-full">
         <div className="mx-auto grid  grid-cols-12  ">
-          <div className="col-span-8 bg-web p-16">
+          <div className="col-span-12 bg-web px-6 py-16 lg:col-span-8 lg:px-8">
             <h3 className="mb-8 font-display text-3xl font-bold text-white">
               Contact Us
             </h3>
             <form>
-              <div className="grid grid-cols-2 gap-10">
+              <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
                 <div>
                   <label htmlFor="email" className="sr-only">
                     Email
@@ -113,7 +113,7 @@ function WebRoute() {
                     placeholder="Email"
                   />
                 </div>
-                <div className="col-span-2">
+                <div className="col-span-1 md:col-span-2">
                   <label htmlFor="comment" className="sr-only">
                     Add your comment
                   </label>
@@ -129,12 +129,12 @@ function WebRoute() {
                   </div>
                 </div>
               </div>
-              <Button className="float-right mt-10" intent="outline">
+              <Button className="float-right mt-10 " intent="outline">
                 Send Message
               </Button>
             </form>
           </div>
-          <div className="col-span-4 flex flex-col justify-center bg-accent px-16">
+          <div className="col-span-12 flex flex-col  bg-accent py-16 px-6  lg:col-span-4 lg:px-8">
             <h3 className="text-3xl font-bold text-white">Services</h3>
             <Button className="mt-6" intent="web">
               Web

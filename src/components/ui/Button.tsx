@@ -17,6 +17,18 @@ const button = cva('button', {
       web: [
         'bg-web  font-display font-bold text-white text-xl  hover:opacity-90',
       ],
+      print: [
+        'bg-print  font-display font-bold text-white text-xl  hover:opacity-90',
+      ],
+      brand: [
+        'bg-brand  font-display font-bold text-white text-xl  hover:opacity-90',
+      ],
+      marketing: [
+        'bg-marketing  font-display font-bold text-white text-xl  hover:opacity-90',
+      ],
+      video: [
+        'bg-video  font-display font-bold text-white text-xl  hover:opacity-90',
+      ],
       outline: [
         'bg-transparent text-white uppercase font-display font-bold border-4 border-white  hover:opacity-90',
       ],

@@ -71,8 +71,8 @@ function Header() {
 
   return (
     <header
-      className={`sticky  z-20 grid grid-cols-12 gap-2 bg-accent p-6 ${
-        scrollDirection === 'down' ? '-top-[121.1px]' : 'top-0'
+      className={`fixed z-20 grid w-full grid-cols-12 gap-2 bg-accent p-6 ${
+        scrollDirection === 'down' ? '-top-[112.1px] ' : 'top-0  '
       }  transition-all duration-500 ease-in-out`}
     >
       <div className="col-span-2">
