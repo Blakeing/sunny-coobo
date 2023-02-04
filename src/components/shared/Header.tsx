@@ -196,11 +196,11 @@ export default function Header() {
 
   return (
     <Popover
-      className={`fixed z-20 w-full  bg-accent p-6 ${
+      className={`fixed z-20 w-full  bg-accent py-6 px-[5vw] ${
         scrollDirection === 'down' ? '-top-[112.1px] ' : 'top-0  '
       }  transition-all duration-500 ease-in-out`}
     >
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto ">
         <div className="flex items-center justify-between md:justify-start md:space-x-10">
           <div className="flex justify-start gap-10 lg:w-0 lg:flex-1">
             <Link href="/">

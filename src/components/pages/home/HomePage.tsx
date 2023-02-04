@@ -18,7 +18,7 @@ export function HomePage({ data }: { data: HomePagePayload }) {
   return (
     <>
       <Header />
-      <main className="my-20 flex-grow space-y-16 px-4 md:px-16 lg:px-32">
+      <main className="my-20 flex-grow space-y-16 px-4 pt-[112.1px] md:px-16 lg:px-32">
         {/* Web */}
         <section className="grid-col-1 grid gap-12  lg:grid-cols-2">
           <div className="flex flex-col justify-center">
@@ -34,7 +34,7 @@ export function HomePage({ data }: { data: HomePagePayload }) {
               of that, your competition thanks you.
             </p>
             <Link
-              href=""
+              href="/web"
               className="font-display text-sm font-bold uppercase tracking-widest text-web underline decoration-2 underline-offset-8"
             >
               Whoof!
@@ -98,7 +98,7 @@ export function HomePage({ data }: { data: HomePagePayload }) {
               “Information is cheap. Meaning is expensive.” - George Dyson
             </p>
             <Link
-              href=""
+              href="/print"
               className="font-display text-sm font-bold uppercase tracking-widest text-print underline decoration-2 underline-offset-8"
             >
               Print!
@@ -120,7 +120,7 @@ export function HomePage({ data }: { data: HomePagePayload }) {
               company represents.
             </p>
             <Link
-              href=""
+              href="/brand"
               className="font-display text-sm font-bold uppercase tracking-widest text-brand underline decoration-2 underline-offset-8"
             >
               Avoid The Windshield
@@ -180,7 +180,7 @@ export function HomePage({ data }: { data: HomePagePayload }) {
               relations, you can reach your target audience more efficiently.
             </p>
             <Link
-              href=""
+              href="/marketing"
               className="font-display text-sm font-bold uppercase tracking-widest text-marketing underline decoration-2 underline-offset-8"
             >
               &quot;Marco?&quot;
@@ -202,7 +202,7 @@ export function HomePage({ data }: { data: HomePagePayload }) {
               content?
             </p>
             <Link
-              href=""
+              href="/video"
               className="font-display text-sm font-bold uppercase tracking-widest text-video underline decoration-2 underline-offset-8"
             >
               Giddy-Up!
