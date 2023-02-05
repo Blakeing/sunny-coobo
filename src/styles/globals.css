@@ -9,3 +9,13 @@
     opacity 0.55s ease 0.25s;
   opacity: 1;
 }
+
+#services section:nth-child(odd) div:first-child {
+  order: 2;
+}
+
+@media screen(lg) {
+  #services section:nth-child(odd) div:first-child {
+    order: unset;
+  }
+}

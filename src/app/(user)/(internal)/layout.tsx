@@ -9,7 +9,7 @@ export default function ServicesLayout({
   return (
     <>
       <Header />
-      <main>{children}</main>
+      <main className="">{children}</main>
       <Footer />
     </>
   )

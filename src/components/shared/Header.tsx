@@ -192,11 +192,10 @@ function classNames(...classes) {
 export default function Header() {
   const scrollDirection = useScrollDirection()
   const segment = useSelectedLayoutSegment()
-  console.log(segment)
 
   return (
     <Popover
-      className={`fixed z-20 w-full  bg-accent py-6 px-[5vw] ${
+      className={`fixed z-20 w-full  bg-transparent py-6 px-[5vw] ${
         scrollDirection === 'down' ? '-top-[112.1px] ' : 'top-0  '
       }  transition-all duration-500 ease-in-out`}
     >
@@ -205,7 +204,7 @@ export default function Header() {
           <div className="flex justify-start gap-10 lg:w-0 lg:flex-1">
             <Link href="/">
               <span className="sr-only">Your Company</span>
-              <Image height={64} width={144} src={logo} alt="Logo" />
+              <Image priority height={64} width={144} src={logo} alt="Logo" />
             </Link>
             {/* Navigation*/}
             <Popover.Group

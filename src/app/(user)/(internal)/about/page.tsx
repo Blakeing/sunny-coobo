@@ -9,10 +9,10 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 const employees = [
-  { name: 'Blake Harrison', href: '/about/#', image: harrison },
-  { name: 'Brian Brewer', href: '/about/#', image: brewer },
-  { name: 'Victoria Chu', href: '#', image: chu },
-  { name: 'Justin Fox', href: '/about/#', image: fox },
+  { name: 'Blake Harrison', href: '/about/blake-harrison', image: harrison },
+  { name: 'Brian Brewer', href: '/about/brian-brewer', image: brewer },
+  { name: 'Victoria Chu', href: '/about/victoria-chu', image: chu },
+  { name: 'Justin Fox', href: '/about/justin-fox', image: fox },
   { name: 'Blake Ingenthron', href: '/about/#', image: ingenthron },
   { name: 'Cason Smith', href: '/about/#', image: smith },
 ]
@@ -42,17 +42,21 @@ const industries = [
 
 function AboutRoute() {
   return (
-    <div className="">
+    <>
       <div className="relative flex h-80 flex-col justify-center bg-gray-200 px-[5vw] pt-[112.1px]">
-        <h1 className="z-10 font-display text-6xl font-bold text-white">
+        <h1 className="z-10 font-display text-5xl font-bold text-white">
           About Us
         </h1>
         <Image
           src={mark}
           fill
+          sizes="100vw"
           className="absolute inset-0 object-cover "
           alt="Background Target"
         />
+        <div className="absolute inset-0 bg-accent opacity-50">
+          <span className="sr-only"></span>
+        </div>
       </div>
       <div className="grid grid-cols-1  xl:grid-cols-2 ">
         <div className="bg-white p-[5vw]">
@@ -119,7 +123,7 @@ function AboutRoute() {
           ))}
         </div>
       </div>
-    </div>
+    </>
   )
 }
 
