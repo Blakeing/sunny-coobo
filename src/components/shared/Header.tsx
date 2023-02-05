@@ -1,104 +1,17 @@
 'use client'
 
 import { Disclosure, Popover, Transition } from '@headlessui/react'
-import {
-  ArrowPathIcon,
-  Bars3Icon,
-  BookmarkSquareIcon,
-  CalendarIcon,
-  ChartBarIcon,
-  CursorArrowRaysIcon,
-  LifebuoyIcon,
-  PhoneIcon,
-  PlayIcon,
-  ShieldCheckIcon,
-  Squares2X2Icon,
-  XMarkIcon,
-} from '@heroicons/react/24/outline'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import logo from '@public/coobo-logo-white.svg'
+import cn from 'clsx'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useSelectedLayoutSegment } from 'next/navigation'
 import { Fragment } from 'react'
 
+import { useHasScrolled } from '@/utils/useHasScrolled'
 import { useScrollDirection } from '@/utils/useScrollDirection'
 
-const solutions = [
-  {
-    name: 'Analytics',
-    description:
-      'Get a better understanding of where your traffic is coming from.',
-    href: '#',
-    icon: ChartBarIcon,
-  },
-  {
-    name: 'Engagement',
-    description: 'Speak directly to your customers in a more meaningful way.',
-    href: '#',
-    icon: CursorArrowRaysIcon,
-  },
-  {
-    name: 'Security',
-    description: "Your customers' data will be safe and secure.",
-    href: '#',
-    icon: ShieldCheckIcon,
-  },
-  {
-    name: 'Integrations',
-    description: "Connect with third-party tools that you're already using.",
-    href: '#',
-    icon: Squares2X2Icon,
-  },
-  {
-    name: 'Automations',
-    description:
-      'Build strategic funnels that will drive your customers to convert',
-    href: '#',
-    icon: ArrowPathIcon,
-  },
-]
-const callsToAction = [
-  { name: 'Watch Demo', href: '#', icon: PlayIcon },
-  { name: 'Contact Sales', href: '#', icon: PhoneIcon },
-]
-const resources = [
-  {
-    name: 'Help Center',
-    description:
-      'Get all of your questions answered in our forums or contact support.',
-    href: '#',
-    icon: LifebuoyIcon,
-  },
-  {
-    name: 'Guides',
-    description:
-      'Learn how to maximize our platform to get the most out of it.',
-    href: '#',
-    icon: BookmarkSquareIcon,
-  },
-  {
-    name: 'Events',
-    description:
-      'See what meet-ups and other events we might be planning near you.',
-    href: '#',
-    icon: CalendarIcon,
-  },
-  {
-    name: 'Security',
-    description: 'Understand how we take your privacy seriously.',
-    href: '#',
-    icon: ShieldCheckIcon,
-  },
-]
-const recentPosts = [
-  { id: 1, name: 'Boost your conversion rate', href: '#' },
-  {
-    id: 2,
-    name: 'How to use search engine optimization to drive traffic to your site',
-    href: '#',
-  },
-  { id: 3, name: 'Improve your customer experience', href: '#' },
-]
 const links = [
   {
     href: '/web',
@@ -185,19 +98,19 @@ const navigation = [
   },
 ]
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
-
 export default function Header() {
   const scrollDirection = useScrollDirection()
+  const hasScrolled = useHasScrolled()
+
   const segment = useSelectedLayoutSegment()
 
   return (
     <Popover
-      className={`fixed z-20 w-full  bg-transparent py-6 px-[5vw] ${
-        scrollDirection === 'down' ? '-top-[112.1px] ' : 'top-0  '
-      }  transition-all duration-500 ease-in-out`}
+      className={cn(
+        'fixed   z-20 w-full py-6 px-[5vw] transition-all duration-500 ease-in-out',
+        { 'bg-accent': hasScrolled },
+        `${scrollDirection === 'down' ? 'top-[-112.1px]' : 'top-0'} `
+      )}
     >
       <div className="mx-auto ">
         <div className="flex items-center justify-between md:justify-start md:space-x-10">
@@ -280,7 +193,7 @@ export default function Header() {
                     <div key={item.name}>
                       <Link
                         href={item.href}
-                        className={classNames(
+                        className={cn(
                           item.href === `/${segment}`
                             ? 'bg-gray-100 text-gray-900'
                             : 'text-white',
@@ -295,7 +208,7 @@ export default function Header() {
                       {({ open }) => (
                         <>
                           <Disclosure.Button
-                            className={classNames(
+                            className={cn(
                               item.href === `/${segment}`
                                 ? 'bg-gray-100 text-gray-900'
                                 : 'text-white',
@@ -304,7 +217,7 @@ export default function Header() {
                           >
                             <span className="flex-1">{item.name}</span>
                             <svg
-                              className={classNames(
+                              className={cn(
                                 open ? 'rotate-90 opacity-80' : ' text-white ',
                                 'ml-3 h-5 w-5 flex-shrink-0 transform transition-colors duration-150 ease-in-out group-hover:text-accent'
                               )}
@@ -323,7 +236,7 @@ export default function Header() {
                                 key={subItem.name}
                                 as={Link}
                                 href={subItem.href}
-                                className={classNames(
+                                className={cn(
                                   subItem.href === `/${segment}`
                                     ? 'bg-white text-black'
                                     : 'bg-none text-white',
