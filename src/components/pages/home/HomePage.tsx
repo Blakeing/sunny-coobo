@@ -11,6 +11,7 @@ import { ProjectListItem } from '@/components/pages/home/ProjectListItem'
 import Footer from '@/components/shared/Footer'
 import Header from '@/components/shared/Header'
 import { Button } from '@/components/ui/Button'
+import Testimonials from '@/components/ui/Testimonials'
 import { resolveHref } from '@/lib/sanity.links'
 import type { HomePagePayload } from '@/types'
 
@@ -268,6 +269,8 @@ export function HomePage({ data }: { data: HomePagePayload }) {
             </section>
           )} */}
         </div>
+        {/* Testimonials */}
+        <Testimonials />
       </main>
       <Footer />
     </>

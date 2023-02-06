@@ -10,6 +10,7 @@ export default function Testimonials() {
   const [loaded, setLoaded] = useState(false)
   const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
     initial: 0,
+
     slideChanged(slider) {
       setCurrentSlide(slider.track.details.rel)
     },
@@ -20,11 +21,11 @@ export default function Testimonials() {
 
   return (
     <>
-      <div className="relative bg-accent p-[5vw]">
+      <div className="relative bg-accent px-[5vw] pt-[5vw]">
         <div ref={sliderRef} className="keen-slider">
           <div className="keen-slider__slide number-slide1">
             <div className="flex max-w-7xl flex-col items-center justify-center">
-              <p className="pb-8 font-display text-2xl text-coobo">
+              <p className="pb-8 font-display text-lg text-coobo lg:text-2xl">
                 Our partnership with Coobo Media has helped us take the SandBox
                 Logistics brand from concept to reality. We continue to rely on
                 their support as we expand into new markets and seek to define
@@ -38,7 +39,7 @@ export default function Testimonials() {
           </div>
           <div className="keen-slider__slide number-slide1">
             <div className="flex max-w-7xl flex-col items-center justify-center">
-              <p className="pb-8 font-display text-2xl text-coobo">
+              <p className="pb-8 font-display text-lg text-coobo lg:text-2xl">
                 Coobo Media’s work is creative and brilliant! Coobo Media takes
                 the time to understand client needs and deliver award-winning
                 results. Team is very professional, attentive, and wonderful to
@@ -53,15 +54,18 @@ export default function Testimonials() {
           </div>
           <div className="keen-slider__slide number-slide1">
             <div className="flex max-w-7xl flex-col items-center justify-center">
-              <p className="pb-8 font-display text-2xl text-coobo">
-                Our partnership with Coobo Media has helped us take the SandBox
-                Logistics brand from concept to reality. We continue to rely on
-                their support as we expand into new markets and seek to define
-                our services to new audiences.
+              <p className="pb-8 font-display text-lg text-coobo lg:text-2xl">
+                My Company has worked with Coobo Media over the past three years
+                developing our internal and external marketing materials.
+                They’ve done a wonderful job helping us build and promote the
+                Swagelok brand to the Houston community, whether it’s through
+                marketing materials, website development or event materials.
+                Coobo is truly a partner in our business and always there to
+                support our day to day marketing needs.
               </p>
-              <p className="font-display text-white">Josh Oren</p>
+              <p className="font-display text-white">Brian H. Payne</p>
               <p className="font-display text-sm text-white/60">
-                President and CEO SandBox Logistics
+                Swagelok Central Houston
               </p>
             </div>
           </div>

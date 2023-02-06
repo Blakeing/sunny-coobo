@@ -8,7 +8,7 @@ function BrewerRoute() {
   return (
     <>
       <div className="grid min-h-[calc(100vh-96px)] grid-cols-12 ">
-        <div className="aspect-w-3 aspect-h-4 relative col-span-12 bg-green-500 md:col-span-6 lg:col-span-3">
+        <div className="aspect-w-3 aspect-h-4 relative col-span-12 md:col-span-6 lg:col-span-3">
           <Image
             src={brewer}
             className="object-cover"
