@@ -10,6 +10,7 @@ import Link from 'next/link'
 import { ProjectListItem } from '@/components/pages/home/ProjectListItem'
 import Footer from '@/components/shared/Footer'
 import Header from '@/components/shared/Header'
+import { Button } from '@/components/ui/Button'
 import { resolveHref } from '@/lib/sanity.links'
 import type { HomePagePayload } from '@/types'
 
@@ -26,9 +27,23 @@ export function HomePage({ data }: { data: HomePagePayload }) {
             src={tilt}
             alt="Tilt Houston"
             fill
+            priority
             sizes="100vw"
             className="object-cover"
           />
+          <div className="absolute inset-0 z-10 flex h-full w-full flex-col justify-center px-[5vw] ">
+            <h1 className="mb-2 text-3xl font-bold text-white lg:text-7xl">
+              A Creative Agency
+            </h1>
+            <h3 className="mb-4 text-2xl italic text-white lg:text-3xl">
+              Focused on Web Design
+            </h3>
+
+            <div className="flex flex-wrap gap-5">
+              <Button intent="primary"> Learn More</Button>
+              <Button intent="secondary">Contact</Button>
+            </div>
+          </div>
           <div className="absolute inset-0 bg-accent opacity-50">
             <span className="sr-only"></span>
           </div>

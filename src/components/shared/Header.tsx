@@ -107,14 +107,14 @@ export default function Header() {
   return (
     <Popover
       className={cn(
-        'fixed   z-20 w-full py-6 px-[5vw] transition-all duration-500 ease-in-out',
-        { 'bg-accent': hasScrolled },
-        `${scrollDirection === 'down' ? 'top-[-112.1px]' : 'top-0'} `
+        'fixed  z-20 w-full border-t-8 border-white py-6 px-[5vw] transition-all duration-500 ease-in-out',
+        { 'bg-black/50': hasScrolled },
+        `${scrollDirection === 'down' ? 'top-[-120.1px]' : 'top-0'}`
       )}
     >
-      <div className="mx-auto ">
+      <div className="mx-auto">
         <div className="flex items-center justify-between md:justify-start md:space-x-10">
-          <div className="flex justify-start gap-10 lg:w-0 lg:flex-1">
+          <div className="flex justify-start gap-10 lg:flex-1">
             <Link href="/">
               <span className="sr-only">Your Company</span>
               <Image priority height={64} width={144} src={logo} alt="Logo" />
@@ -122,7 +122,7 @@ export default function Header() {
             {/* Navigation*/}
             <Popover.Group
               as="nav"
-              className=" hidden items-center space-x-8 md:flex "
+              className="hidden items-center space-x-8 md:flex "
             >
               {links.map((link) => (
                 <Popover key={link.label} className="relative">
@@ -154,14 +154,13 @@ export default function Header() {
               ))}
             </Popover.Group>
           </div>
-
-          <div className="-my-2 -mr-2 ">
-            <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-coobo">
-              <span className="sr-only">Open menu</span>
-              <Bars3Icon className="h-6 w-6" aria-hidden="true" />
-            </Popover.Button>
-          </div>
         </div>
+      </div>
+      <div className="absolute top-0 right-0 border-l-8 border-b-8 border-white ">
+        <Popover.Button className="inline-flex items-center justify-center  bg-coobo p-2 text-white  hover:text-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-coobo">
+          <span className="sr-only">Open menu</span>
+          <Bars3Icon className="h-12 w-12" aria-hidden="true" />
+        </Popover.Button>
       </div>
       {/*Mobile Popover */}
       <Transition
@@ -175,7 +174,7 @@ export default function Header() {
       >
         <Popover.Panel
           focus
-          className="absolute right-0 top-0 min-h-screen w-80  origin-top-right transform border-l-8 border-white bg-coobo  transition "
+          className="absolute right-0 top-0  min-h-screen w-80  origin-top-right transform border-l-8 border-white bg-coobo  transition "
         >
           <div className="flex flex-grow flex-col overflow-y-auto   pt-5 pb-4">
             <div className="flex flex-shrink-0 items-center justify-end px-4">
@@ -252,6 +251,15 @@ export default function Header() {
                     </Disclosure>
                   )
                 )}
+                <h4 className="pt-5 font-display text-xl font-bold text-white">
+                  Contact Information
+                </h4>
+                <p className="text-white">281.206.0022</p>
+                <p className="text-white">hi@coobomedia.com</p>
+                <p className="text-white">
+                  9525 Kay Freeway, Suite 230
+                  <br /> Houston, Texas 77024
+                </p>
               </nav>
             </div>
           </div>

@@ -10,7 +10,7 @@ const Footer = () => {
           &copy; {copyrightDate} Coobo Media | Terms of Service
         </p>
       </div>
-      <div className="absolute -bottom-2 z-30 flex w-full justify-center gap-4  lg:right-[5vw] lg:justify-end  ">
+      <div className="absolute -bottom-2  flex w-full justify-center gap-4  lg:right-[5vw] lg:justify-end  ">
         <a className="flex items-center  border-x-8 border-t-8 border-white bg-coobo px-3 py-2 text-white focus:outline-none">
           <svg
             aria-hidden="true"
