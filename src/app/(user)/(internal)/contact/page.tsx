@@ -1,16 +1,10 @@
 'use client'
 
-import cooboBG1 from '@public/coobo_3d_houston_1.jpg'
-import cooboBG2 from '@public/coobo_3d_houston_2.png'
-import mark from '@public/header_bg_mark.jpg'
 import cityBG from '@public/page_title_bg_city2.jpg'
-import { GoogleMap, useJsApiLoader } from '@react-google-maps/api'
 import Image from 'next/image'
 
 import ContactForm from '@/components/forms/ContactForm'
 import Map from '@/components/shared/Map'
-import { Button } from '@/components/ui/Button'
-import MapStyles from '@/utils/MapStyles'
 
 function ContactRoute() {
   return (
