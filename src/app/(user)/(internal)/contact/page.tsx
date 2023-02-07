@@ -11,7 +11,7 @@ function ContactRoute() {
     <>
       <div className="relative flex h-80 flex-col justify-center  px-[5vw] pt-[112.1px]">
         <h1 className="z-10 font-display text-5xl font-bold text-white">
-          Contact Us
+          Contact Us Test
         </h1>
         <Image
           src={cityBG}
