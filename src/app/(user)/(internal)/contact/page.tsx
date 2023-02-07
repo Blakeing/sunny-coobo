@@ -1,11 +1,16 @@
+'use client'
+
 import cooboBG1 from '@public/coobo_3d_houston_1.jpg'
 import cooboBG2 from '@public/coobo_3d_houston_2.png'
 import mark from '@public/header_bg_mark.jpg'
 import cityBG from '@public/page_title_bg_city2.jpg'
+import { GoogleMap, useJsApiLoader } from '@react-google-maps/api'
 import Image from 'next/image'
 
 import ContactForm from '@/components/forms/contactForm'
+import Map from '@/components/shared/Map'
 import { Button } from '@/components/ui/Button'
+import MapStyles from '@/utils/MapStyles'
 
 function ContactRoute() {
   return (
@@ -26,7 +31,9 @@ function ContactRoute() {
         </div>
       </div>
       <div className="grid-cols 1 grid lg:grid-cols-2">
-        <div className="h-80">Google Map</div>
+        <div className="relative flex items-center justify-center bg-accent">
+          <Map />
+        </div>
         <div className="space-y-4 bg-accent p-[5vw]">
           <h1 className="font-display text-2xl font-bold text-white ">
             Coobo Media

@@ -24,6 +24,7 @@ function ContactForm() {
                 </label>
                 <input
                   id="name"
+                  required
                   type="text"
                   name="name"
                   className="block w-full rounded-md  border-white  bg-black/40 px-5 py-3 text-white shadow-sm focus:border-white focus:ring-white  sm:text-sm"
@@ -40,6 +41,7 @@ function ContactForm() {
                   Email
                 </label>
                 <input
+                  required
                   type="email"
                   name="email"
                   id="email"
@@ -58,6 +60,7 @@ function ContactForm() {
                 </label>
                 <div className="">
                   <textarea
+                    required
                     rows={8}
                     name="message"
                     placeholder="Your Message"
