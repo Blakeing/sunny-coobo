@@ -2,7 +2,7 @@ import marketing from '@public/bg_marketing_splash-1.webp'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import ServicesForm from '@/components/forms/ServicesForm'
+import ServicesForm from '@/components/shared/ServicesForm'
 
 function MarketingRoute() {
   return (

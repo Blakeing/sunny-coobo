@@ -2,7 +2,7 @@ import video from '@public/video2.webp'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import ServicesForm from '@/components/forms/ServicesForm'
+import ServicesForm from '@/components/shared/ServicesForm'
 import { Button } from '@/components/ui/Button'
 
 function VideoRoute() {
@@ -23,8 +23,18 @@ function VideoRoute() {
               content?
             </p>
             <div className="flex flex-wrap gap-5">
-              <Button>Learn More</Button>
-              <Button intent="secondary">Examples</Button>
+              <Link
+                className="flex items-center bg-accent py-4 px-5  font-display font-bold uppercase text-white hover:opacity-90"
+                href="/#"
+              >
+                Learn More
+              </Link>
+              <Link
+                href="/work"
+                className="bg-white py-4 px-5 font-display font-bold uppercase text-accent   hover:opacity-90"
+              >
+                Portfolio
+              </Link>
             </div>
           </div>
           <div className="relative">

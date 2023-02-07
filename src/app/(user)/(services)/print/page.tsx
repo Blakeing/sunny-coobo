@@ -2,8 +2,7 @@ import print from '@public/print-landing.png'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import ServicesForm from '@/components/forms/ServicesForm'
-import { Button } from '@/components/ui/Button'
+import ServicesForm from '@/components/shared/ServicesForm'
 
 function PrintRoute() {
   return (

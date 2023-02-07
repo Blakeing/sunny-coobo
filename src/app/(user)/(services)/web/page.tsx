@@ -2,7 +2,7 @@ import web from '@public/bg_web_dog.webp'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import ServicesForm from '@/components/forms/ServicesForm'
+import ServicesForm from '@/components/shared/ServicesForm'
 import { Button } from '@/components/ui/Button'
 
 function WebRoute() {
