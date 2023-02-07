@@ -8,16 +8,56 @@ import React, { useState } from 'react'
 export default function Testimonials() {
   const [currentSlide, setCurrentSlide] = React.useState(0)
   const [loaded, setLoaded] = useState(false)
-  const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
-    initial: 0,
+  const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>(
+    // initial: 0,
 
-    slideChanged(slider) {
-      setCurrentSlide(slider.track.details.rel)
+    // slideChanged(slider) {
+    //   setCurrentSlide(slider.track.details.rel)
+    // },
+    // created() {
+    //   setLoaded(true)
+    // },
+    {
+      initial: 0,
+      loop: true,
+      slideChanged(slider) {
+        setCurrentSlide(slider.track.details.rel)
+      },
+      created() {
+        setLoaded(true)
+      },
     },
-    created() {
-      setLoaded(true)
-    },
-  })
+    [
+      (slider) => {
+        let timeout: ReturnType<typeof setTimeout>
+        let mouseOver = false
+        function clearNextTimeout() {
+          clearTimeout(timeout)
+        }
+        function nextTimeout() {
+          clearTimeout(timeout)
+          if (mouseOver) return
+          timeout = setTimeout(() => {
+            slider.next()
+          }, 5000)
+        }
+        slider.on('created', () => {
+          slider.container.addEventListener('mouseover', () => {
+            mouseOver = true
+            clearNextTimeout()
+          })
+          slider.container.addEventListener('mouseout', () => {
+            mouseOver = false
+            nextTimeout()
+          })
+          nextTimeout()
+        })
+        slider.on('dragStarted', clearNextTimeout)
+        slider.on('animationEnded', nextTimeout)
+        slider.on('updated', nextTimeout)
+      },
+    ]
+  )
 
   return (
     <>
@@ -72,7 +112,7 @@ export default function Testimonials() {
         </div>
       </div>
       {loaded && instanceRef.current && (
-        <div className="flex justify-center bg-[#333333] py-4">
+        <div className="flex justify-center bg-[#333333] pt-4 pb-[5vw]">
           {[
             ...Array(instanceRef.current.track.details.slides.length).keys(),
           ].map((idx) => {
