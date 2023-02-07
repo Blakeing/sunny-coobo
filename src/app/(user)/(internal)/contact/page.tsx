@@ -3,7 +3,7 @@
 import cityBG from '@public/page_title_bg_city2.jpg'
 import Image from 'next/image'
 
-import ContactForm from '@/components/forms/ContactForm'
+// import ContactForm from '@/components/forms/ContactForm'
 import Map from '@/components/shared/Map'
 
 function ContactRoute() {
@@ -75,7 +75,7 @@ function ContactRoute() {
           </p>
         </div>
       </div>
-      <ContactForm />
+      {/* <ContactForm /> */}
     </>
   )
 }
