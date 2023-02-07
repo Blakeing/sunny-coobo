@@ -1,3 +1,4 @@
+import logo from '@public/white-coobo-logo.svg'
 import { GoogleMap, Marker, useJsApiLoader } from '@react-google-maps/api'
 
 import { Spinner } from '../ui/Spinner'
@@ -24,7 +25,7 @@ export default function Map() {
         center={center}
         options={options}
       >
-        <Marker position={center} />
+        <Marker icon={logo} position={center} />
       </GoogleMap>
     )
   }
