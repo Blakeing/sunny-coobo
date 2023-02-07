@@ -3,7 +3,7 @@
 import cityBG from '@public/page_title_bg_city2.jpg'
 import Image from 'next/image'
 
-// import ContactForm from '@/components/forms/ContactForm'
+import ContactForm from '@/components/forms/ContactForm'
 import Map from '@/components/shared/Map'
 
 function ContactRoute() {
@@ -11,7 +11,7 @@ function ContactRoute() {
     <>
       <div className="relative flex h-80 flex-col justify-center  px-[5vw] pt-[112.1px]">
         <h1 className="z-10 font-display text-5xl font-bold text-white">
-          Contact Us Test
+          Contact Us
         </h1>
         <Image
           src={cityBG}
@@ -75,7 +75,7 @@ function ContactRoute() {
           </p>
         </div>
       </div>
-      {/* <ContactForm /> */}
+      <ContactForm />
     </>
   )
 }
