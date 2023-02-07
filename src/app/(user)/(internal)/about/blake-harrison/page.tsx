@@ -1,5 +1,6 @@
 import harrison from '@public/staff_blake_harrison.jpg'
 import Image from 'next/image'
+import Link from 'next/link'
 
 import { Button } from '@/components/ui/Button'
 
@@ -53,8 +54,13 @@ function HarrisonRoute() {
               </p>
             </div>
           </div>
-          <div className="span-col-1 lg:span-col-2 flex justify-center pt-8">
-            <Button intent="outline">Back to about us page</Button>
+          <div className="span-col-1 lg:span-col-2 flex items-center justify-center pt-8">
+            <Link
+              className="cursor-pointer border-2 border-white px-10 py-3 font-display font-bold uppercase hover:opacity-90"
+              href="/about"
+            >
+              Back to about us page
+            </Link>
           </div>
         </div>
       </div>

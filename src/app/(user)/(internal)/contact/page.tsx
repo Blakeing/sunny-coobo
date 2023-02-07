@@ -7,7 +7,7 @@ import cityBG from '@public/page_title_bg_city2.jpg'
 import { GoogleMap, useJsApiLoader } from '@react-google-maps/api'
 import Image from 'next/image'
 
-import ContactForm from '@/components/forms/contactForm'
+import ContactForm from '@/components/forms/ContactForm'
 import Map from '@/components/shared/Map'
 import { Button } from '@/components/ui/Button'
 import MapStyles from '@/utils/MapStyles'

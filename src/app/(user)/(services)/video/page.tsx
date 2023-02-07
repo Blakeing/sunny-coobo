@@ -1,6 +1,8 @@
 import video from '@public/video2.webp'
 import Image from 'next/image'
+import Link from 'next/link'
 
+import ServicesForm from '@/components/forms/ServicesForm'
 import { Button } from '@/components/ui/Button'
 
 function VideoRoute() {
@@ -121,70 +123,40 @@ function VideoRoute() {
             <h3 className="mb-8 font-display text-3xl font-bold text-white">
               Contact Us
             </h3>
-            <form>
-              <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
-                <div>
-                  <label htmlFor="email" className="sr-only">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    name="email"
-                    id="email"
-                    className="block w-full rounded-md border-gray-300 px-5 py-3 shadow-sm focus:border-accent focus:ring-accent sm:text-sm"
-                    placeholder="Name"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="sr-only">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    name="email"
-                    id="email"
-                    className="block w-full rounded-md border-gray-300 px-5 py-3 shadow-sm focus:border-accent focus:ring-accent sm:text-sm"
-                    placeholder="Email"
-                  />
-                </div>
-                <div className="col-span-1 md:col-span-2">
-                  <label htmlFor="comment" className="sr-only">
-                    Add your comment
-                  </label>
-                  <div className="">
-                    <textarea
-                      rows={8}
-                      name="comment"
-                      placeholder="Message"
-                      id="comment"
-                      className="block w-full rounded-md border-gray-300 px-5 py-3 shadow-sm focus:border-accent focus:ring-accent sm:text-sm"
-                      defaultValue={''}
-                    />
-                  </div>
-                </div>
-              </div>
-              <Button className="float-right mt-10 " intent="outline">
-                Send Message
-              </Button>
-            </form>
+            <ServicesForm />
           </div>
           <div className="col-span-12 flex flex-col  bg-accent py-16 px-6  lg:col-span-4 lg:px-8">
             <h3 className="text-3xl font-bold text-white">Services</h3>
-            <Button className="mt-6" intent="accent">
+            <Link
+              href="/web"
+              className="mt-6 bg-accentGray px-5 py-4 text-center  font-display text-lg  font-bold text-white    hover:opacity-90"
+            >
               Web
-            </Button>
-            <Button className="mt-5" intent="accent">
+            </Link>
+            <Link
+              href="/print"
+              className="mt-5 bg-accentGray px-5 py-4 text-center  font-display text-lg  font-bold text-white    hover:opacity-90"
+            >
               Print
-            </Button>
-            <Button className="mt-5" intent="accent">
+            </Link>
+            <Link
+              href="/brand"
+              className="mt-5 bg-accentGray px-5 py-4 text-center  font-display text-lg  font-bold text-white    hover:opacity-90"
+            >
               Brand
-            </Button>
-            <Button className="mt-5" intent="accent">
+            </Link>
+            <Link
+              href="/marketing"
+              className="mt-5 bg-accentGray px-5 py-4 text-center  font-display text-lg  font-bold text-white    hover:opacity-90"
+            >
               Marketing
-            </Button>
-            <Button className="mt-5" intent="video">
+            </Link>
+            <Link
+              href="/video"
+              className="mt-5 bg-video px-5 py-4 text-center  font-display text-lg  font-bold text-white    hover:opacity-90"
+            >
               Video
-            </Button>
+            </Link>
           </div>
         </div>
       </section>

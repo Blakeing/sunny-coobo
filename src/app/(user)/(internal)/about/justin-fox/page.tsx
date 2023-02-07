@@ -1,5 +1,6 @@
 import fox from '@public/staff_justin_fox.jpg'
 import Image from 'next/image'
+import Link from 'next/link'
 
 import { Button } from '@/components/ui/Button'
 
@@ -44,7 +45,12 @@ function ChuRoute() {
             </div>
           </div>
           <div className="span-col-1 lg:span-col-2 flex justify-center pt-8">
-            <Button intent="outline">Back to about us page</Button>
+            <Link
+              className="cursor-pointer border-2 border-white px-10 py-3 font-display font-bold uppercase hover:opacity-90"
+              href="/about"
+            >
+              Back to about us page
+            </Link>
           </div>
         </div>
       </div>
