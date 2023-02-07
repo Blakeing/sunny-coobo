@@ -4,6 +4,7 @@ import mark from '@public/header_bg_mark.jpg'
 import cityBG from '@public/page_title_bg_city2.jpg'
 import Image from 'next/image'
 
+import ContactForm from '@/components/forms/contactForm'
 import { Button } from '@/components/ui/Button'
 
 function ContactRoute() {
@@ -73,76 +74,7 @@ function ContactRoute() {
           </p>
         </div>
       </div>
-      <div className="relative">
-        <div className="grid grid-cols-1 lg:grid-cols-12">
-          <div className="z-30 grid-cols-1 bg-black/50 p-[5vw] text-white lg:col-start-7 lg:col-end-11">
-            <h2 className="pb-8 text-2xl font-bold text-white">Contact Us</h2>
-            <form>
-              <div className="grid grid-cols-1 gap-10 ">
-                <div>
-                  <label htmlFor="email" className="sr-only">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    name="email"
-                    id="email"
-                    className="block w-full rounded-md border-gray-300 px-5 py-3 shadow-sm focus:border-accent focus:ring-accent sm:text-sm"
-                    placeholder="Name"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="sr-only">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    name="email"
-                    id="email"
-                    className="block w-full rounded-md border-gray-300 px-5 py-3 shadow-sm focus:border-accent focus:ring-accent sm:text-sm"
-                    placeholder="Email"
-                  />
-                </div>
-                <div className="col-span-1 ">
-                  <label htmlFor="comment" className="sr-only">
-                    Add your comment
-                  </label>
-                  <div className="">
-                    <textarea
-                      rows={8}
-                      name="comment"
-                      placeholder="Message"
-                      id="comment"
-                      className="block w-full rounded-md border-gray-300 px-5 py-3 shadow-sm focus:border-accent focus:ring-accent sm:text-sm"
-                      defaultValue={''}
-                    />
-                  </div>
-                </div>
-              </div>
-              <Button className="float-right mt-10 " intent="outline">
-                Send Message
-              </Button>
-            </form>
-          </div>
-        </div>
-        <Image
-          src={cooboBG2}
-          fill
-          sizes="100vw"
-          className="absolute inset-0 z-20 object-cover "
-          alt="Background Target"
-        />
-        <Image
-          src={cooboBG1}
-          fill
-          sizes="100vw"
-          className="absolute inset-0 object-cover "
-          alt="Background Target"
-        />
-        <div className="absolute inset-0 bg-accent opacity-50">
-          <span className="sr-only"></span>
-        </div>
-      </div>
+      <ContactForm />
     </>
   )
 }

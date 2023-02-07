@@ -4,7 +4,7 @@ const copyrightDate = new Date().getFullYear()
 
 const Footer = () => {
   return (
-    <div className="relative  border-b-8 border-white bg-accent ">
+    <footer className="relative  border-b-8 border-white bg-accent ">
       <div className="flex h-full items-center justify-center px-[5vw] pb-14 pt-8 text-center lg:justify-start lg:py-8">
         <p className="text-body">
           &copy; {copyrightDate} Coobo Media | Terms of Service
@@ -43,7 +43,7 @@ const Footer = () => {
           </svg>
         </a>
       </div>
-    </div>
+    </footer>
   )
 }
 

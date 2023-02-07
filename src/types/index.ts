@@ -48,3 +48,29 @@ export interface SharedModalProps {
   navigation: boolean
   direction?: number
 }
+
+export type StepOneData = {
+  firstName: string
+  lastName: string
+  email: string
+  company: string
+  phone: string
+}
+
+export type StepTwoData = {
+  whatDoesYourCompanyDo: string
+  targetAudience: string
+  usp: string
+  brandGuidelines: string
+}
+
+export type StepThreeData = {
+  currentWebsite: string
+  url: string
+  likeDislike: string
+  purchasedUrl: string
+  likedUrls: string
+  goal: string
+}
+
+export type FormData = StepOneData & StepTwoData & StepThreeData

@@ -117,7 +117,7 @@ function VideoRoute() {
       </section>
       <section className="w-full">
         <div className="mx-auto grid  grid-cols-12  ">
-          <div className="col-span-12 bg-video px-6 py-16 lg:col-span-8 lg:px-8">
+          <div className="col-span-12 bg-video px-[5vw] py-16 lg:col-span-8 ">
             <h3 className="mb-8 font-display text-3xl font-bold text-white">
               Contact Us
             </h3>

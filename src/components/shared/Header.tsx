@@ -106,8 +106,9 @@ export default function Header() {
 
   return (
     <Popover
+      as="header"
       className={cn(
-        'fixed  z-20 w-full border-t-8 border-white py-6 px-[5vw] transition-all duration-500 ease-in-out',
+        'fixed z-20 w-full border-t-8 border-white py-6 px-[5vw] transition-all duration-500 ease-in-out',
         { 'bg-black/50': hasScrolled },
         `${scrollDirection === 'down' ? 'top-[-120.1px]' : 'top-0'}`
       )}

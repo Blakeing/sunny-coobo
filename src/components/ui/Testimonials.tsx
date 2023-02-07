@@ -21,7 +21,7 @@ export default function Testimonials() {
 
   return (
     <>
-      <div className="relative bg-accent px-[5vw] pt-[5vw]">
+      <div className="relative bg-[#333333] px-[5vw] pt-[5vw]">
         <div ref={sliderRef} className="keen-slider">
           <div className="keen-slider__slide number-slide1">
             <div className="flex max-w-7xl flex-col items-center justify-center">
@@ -72,7 +72,7 @@ export default function Testimonials() {
         </div>
       </div>
       {loaded && instanceRef.current && (
-        <div className="flex justify-center bg-accent py-4">
+        <div className="flex justify-center bg-[#333333] py-4">
           {[
             ...Array(instanceRef.current.track.details.slides.length).keys(),
           ].map((idx) => {
