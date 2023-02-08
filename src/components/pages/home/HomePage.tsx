@@ -12,6 +12,7 @@ import Footer from '@/components/shared/Footer'
 import Header from '@/components/shared/Header'
 import { Button } from '@/components/ui/Button'
 import Testimonials from '@/components/ui/Testimonials'
+import TypeWriterText from '@/components/ui/TypeWriterText'
 import { resolveHref } from '@/lib/sanity.links'
 import type { HomePagePayload } from '@/types'
 
@@ -32,25 +33,45 @@ export function HomePage({ data }: { data: HomePagePayload }) {
             sizes="100vw"
             className="object-cover"
           />
-          <div className="absolute inset-0 z-10 flex h-full w-full flex-col justify-center px-[5vw] ">
-            <h1 className="mb-2 text-3xl font-bold text-white lg:text-7xl">
+          <div className="absolute inset-0 z-10 mx-auto flex h-full w-full max-w-7xl flex-col justify-center px-[5vw] ">
+            <h1 className="pb-4 text-3xl font-bold text-white lg:text-7xl">
               A Creative Agency
             </h1>
-            <h3 className="mb-4 text-2xl italic text-white lg:text-3xl">
-              Focused on Web Design
+            <h3 className="intro-border pb-8 pt-4 pl-4 text-2xl italic text-white lg:text-3xl">
+              Focused on{' '}
+              <TypeWriterText
+                speed={200}
+                text={[
+                  'Web Design',
+                  'Social Media',
+                  'Digital Marketing',
+                  'Search Engine Optimization',
+                  'Graphic Design',
+                ]}
+                loop={true}
+              />
             </h3>
-
             <div className="flex flex-wrap gap-5">
-              <Button intent="primary"> Learn More</Button>
-              <Button intent="secondary">Contact</Button>
+              <Link
+                className="flex w-52 items-center justify-center bg-coobo py-4  px-5 font-display font-bold uppercase text-white hover:opacity-90"
+                href="#"
+              >
+                Learn More
+              </Link>
+              <Link
+                href="/contact"
+                className="flex w-52 items-center justify-center bg-white py-4 px-5 font-display font-bold uppercase text-accent   hover:opacity-90"
+              >
+                Contact
+              </Link>
             </div>
           </div>
-          <div className="absolute inset-0 bg-accent opacity-50">
+          <div className="absolute inset-0 bg-accent opacity-30">
             <span className="sr-only"></span>
           </div>
         </div>
         {/* Web */}
-        <div id="services" className="space-y-16 px-[5vw] py-20">
+        <div className="space-y-16 px-[5vw] py-20">
           <section className="grid-col-1 grid gap-12  lg:grid-cols-2">
             <div className="flex flex-col justify-center">
               <h2 className="pb-2.5 font-display text-5xl font-bold text-web">

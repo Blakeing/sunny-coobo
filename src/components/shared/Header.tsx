@@ -11,6 +11,7 @@ import { Fragment } from 'react'
 
 import { useHasScrolled } from '@/utils/useHasScrolled'
 import { useScrollDirection } from '@/utils/useScrollDirection'
+import { useScrollPadding } from '@/utils/useScrollPadding'
 
 const links = [
   {

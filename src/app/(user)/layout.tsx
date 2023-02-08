@@ -2,6 +2,8 @@ import '@/styles/globals.css'
 
 import { Montserrat, Open_Sans } from '@next/font/google'
 
+import { useScrollPadding } from '@/utils/useScrollPadding'
+
 const montserrat = Montserrat({
   subsets: ['latin'],
   variable: '--font-montserrat',
@@ -16,6 +18,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+
   return (
     <html
       lang="en"
