@@ -11,7 +11,9 @@ import { ProjectListItem } from '@/components/pages/home/ProjectListItem'
 import Footer from '@/components/shared/Footer'
 import Header from '@/components/shared/Header'
 import { Button } from '@/components/ui/Button'
-import Testimonials from '@/components/ui/Testimonials'
+import ClientSlider from '@/components/ui/ClientSlider'
+import Testimonials from '@/components/ui/TestimonialSlider'
+import TestimonialSlider from '@/components/ui/TestimonialSlider'
 import TypeWriterText from '@/components/ui/TypeWriterText'
 import { resolveHref } from '@/lib/sanity.links'
 import type { HomePagePayload } from '@/types'
@@ -40,7 +42,7 @@ export function HomePage({ data }: { data: HomePagePayload }) {
             <h3 className="intro-border pb-8 pt-4 pl-4 text-2xl italic text-white lg:text-3xl">
               Focused on{' '}
               <TypeWriterText
-                speed={200}
+                speed={500}
                 text={[
                   'Web Design',
                   'Social Media',
@@ -291,7 +293,8 @@ export function HomePage({ data }: { data: HomePagePayload }) {
           )} */}
         </div>
         {/* Testimonials */}
-        <Testimonials />
+        <TestimonialSlider />
+        <ClientSlider />
       </main>
       <Footer />
     </>

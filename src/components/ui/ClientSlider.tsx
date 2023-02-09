@@ -5,18 +5,10 @@ import 'keen-slider/keen-slider.min.css'
 import { useKeenSlider } from 'keen-slider/react'
 import React, { useState } from 'react'
 
-export default function Testimonials() {
+export default function TestimonialSlider() {
   const [currentSlide, setCurrentSlide] = React.useState(0)
   const [loaded, setLoaded] = useState(false)
   const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>(
-    // initial: 0,
-
-    // slideChanged(slider) {
-    //   setCurrentSlide(slider.track.details.rel)
-    // },
-    // created() {
-    //   setLoaded(true)
-    // },
     {
       initial: 0,
       loop: true,
