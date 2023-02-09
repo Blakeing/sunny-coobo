@@ -11,11 +11,11 @@ interface ImageBoxProps {
   classesWrapper?: string
 }
 
-export default function ImageBox({
+export default function TestimnonialImage({
   image,
   alt = 'Cover image',
-  width = 3500,
-  height = 2000,
+  width = 250,
+  height = 150,
   size = '100vw',
   classesWrapper,
 }: ImageBoxProps) {
@@ -30,9 +30,9 @@ export default function ImageBox({
         <Image
           className="absolute h-full w-full "
           alt={alt}
-          width={250}
-          height={145}
-          sizes={size} 
+          width={width}
+          height={height}
+          sizes={size}
           src={imageUrl}
         />
       )}
