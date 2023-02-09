@@ -1,9 +1,15 @@
 import marketing from '@public/bg_marketing_splash-1.webp'
 import web from '@public/bg_web_dog.webp'
 import brand from '@public/brand-landing.webp'
+import ice from '@public/ice-insta.jpeg'
+import marketingInsta from '@public/marketing-insta.jpeg'
+import christmas from '@public/merry-christmas-insta.jpeg'
+import printInsta from '@public/print-insta.jpeg'
 import print from '@public/print-landing.png'
 import tilt from '@public/tilt_houston.jpg'
+import videoInsta from '@public/video-insta.jpeg'
 import video from '@public/video-tv.webp'
+import webInsta from '@public/web-insta.jpeg'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -294,7 +300,48 @@ export function HomePage({ data }: { data: HomePagePayload }) {
         </div>
         {/* Testimonials */}
         <TestimonialSlider />
-        <ClientSlider/>
+        <h3 className="flex justify-center bg-[#333333] pb-8 text-white">
+          <a className="font-bold" href="https://www.instagram.com/coobomedia/">
+            @coobomedia
+          </a>{' '}
+          - Give us a follow
+        </h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6">
+          <div className="aspect-w-1 aspect-h-1 relative">
+            <Image className=" object-cover" alt="Video" src={christmas} fill />
+          </div>
+          <div className="aspect-w-1 aspect-h-1 relative">
+            <Image className=" object-cover" alt="Video" src={ice} fill />
+          </div>
+          <div className="aspect-w-1 aspect-h-1 relative">
+            <Image
+              className=" object-cover"
+              alt="Video"
+              src={videoInsta}
+              fill
+            />
+          </div>
+          <div className="aspect-w-1 aspect-h-1 relative">
+            <Image
+              className=" object-cover"
+              alt="Video"
+              src={marketingInsta}
+              fill
+            />
+          </div>
+          <div className="aspect-w-1 aspect-h-1 relative">
+            <Image
+              className=" object-cover"
+              alt="Video"
+              src={printInsta}
+              fill
+            />
+          </div>
+          <div className="aspect-w-1 aspect-h-1 relative">
+            <Image className=" object-cover" alt="Video" src={webInsta} fill />
+          </div>
+        </div>
+        <ClientSlider />
       </main>
       <Footer />
     </>

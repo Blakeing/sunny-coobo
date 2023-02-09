@@ -32,7 +32,7 @@ export default function TestimonialSlider() {
 
   return (
     <>
-      <div className="relative bg-[#333333]  pb-[5vw]">
+      <div className="relative bg-[#333333]  py-[5vw]">
         <div ref={sliderRef} className="keen-slider">
           <div className="keen-slider__slide number-slide1">
             <Image src={aag} width={250} height={148} alt="aag" />
