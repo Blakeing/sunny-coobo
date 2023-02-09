@@ -79,7 +79,7 @@ export function HomePage({ data }: { data: HomePagePayload }) {
           </div>
         </div>
         {/* Web */}
-        <div className="space-y-16 px-[5vw] py-20">
+        <div className="mx-auto max-w-7xl space-y-16 px-[5vw] py-20">
           <section className="grid-col-1 grid gap-12  lg:grid-cols-2">
             <div className="flex flex-col justify-center">
               <h2 className="pb-2.5 font-display text-5xl font-bold text-web">
