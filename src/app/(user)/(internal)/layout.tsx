@@ -26,7 +26,7 @@ export default async function ServicesLayout({
           { text: 'Blog', slug: 'blog' },
         ]}
       /> */}
-      <main className="">{children}</main>
+      <main className="mt-32">{children}</main>
       <Footer />
     </>
   )
