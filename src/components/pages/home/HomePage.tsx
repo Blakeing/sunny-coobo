@@ -281,8 +281,8 @@ export function HomePage({ data }: { data: HomePagePayload }) {
               </svg>
             </div>
           </section>
-          {/* 
-          {showcaseProjects && showcaseProjects.length > 0 && (
+
+          {/* {showcaseProjects && showcaseProjects.length > 0 && (
             <section className="mx-auto max-w-[100rem] rounded-md border">
               {showcaseProjects.map((project, key) => {
                 const href = resolveHref(project._type, project.slug)

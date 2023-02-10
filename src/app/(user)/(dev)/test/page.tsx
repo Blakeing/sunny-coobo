@@ -52,6 +52,8 @@ import clsx from 'clsx'
 import Image from 'next/image'
 import { Fragment, SetStateAction, useEffect, useState } from 'react'
 
+import type { ShowcaseProject } from '@/types'
+
 interface IFiles {
   title: string
   size: string
@@ -111,7 +113,13 @@ const files = [
   },
 ]
 
+interface ProjectProps {
+  project: ShowcaseProject
+  odd: number
+}
+
 export default function Gallery(props: ProjectProps) {
+  const { project, odd } = props
   const [imageToShow, setImageToShow] = useState('')
   const [lightboxDisplay, setLightBoxDisplay] = useState(false)
   const [tag, setTag] = useState('all')
