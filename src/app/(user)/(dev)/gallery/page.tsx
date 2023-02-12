@@ -64,7 +64,7 @@ const files = [
   },
 ]
 
-export default function Gallery() {
+export default function GalleryRoute() {
   const [imageToShow, setImageToShow] = useState('')
   const [lightboxDisplay, setLightBoxDisplay] = useState(false)
   const [tag, setTag] = useState('all')

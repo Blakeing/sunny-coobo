@@ -8,6 +8,7 @@ import {
   homePageTitleQuery,
   petQuery,
   projectBySlugQuery,
+  projectByTagQuery,
 } from '@/lib/sanity.queries'
 import type { HomePagePayload, ProjectPayload } from '@/types'
 
@@ -28,6 +29,14 @@ export async function getProjectBySlug({
   token?: string
 }): Promise<ProjectPayload | undefined> {
   return await sanityClient(token)?.fetch(projectBySlugQuery, { slug })
+}
+
+export async function getProjectsByTag({
+  token,
+}: {
+  token?: string
+}): Promise<ProjectPayload | undefined> {
+  return await sanityClient(token)?.fetch(projectByTagQuery)
 }
 
 export async function getHomePage({

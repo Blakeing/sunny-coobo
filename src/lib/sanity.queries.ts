@@ -15,6 +15,20 @@ export const projectBySlugQuery = groq`
   }
 `
 
+export const projectByTagQuery = groq`
+  *[_type == "project" && "web" in tags] {
+    _id,
+    client, 
+    coverImage,
+    description,
+    duration, 
+    overview,
+    site, 
+    "slug": slug.current,
+    tags,
+    title,
+  }`
+
 export const petQuery = groq`
   *[_type == "pet"]
 `

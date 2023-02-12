@@ -1,17 +1,17 @@
 import { notFound } from 'next/navigation'
 
-import { TestPage } from '@/components/pages/test/TestPage'
-import { TestPagePreview } from '@/components/pages/test/TestPreviewPage'
+import { WorkPage } from '@/components/pages/work/WorkPage'
+import { WorkPagePreview } from '@/components/pages/work/WorkPagePreview'
 import { PreviewSuspense } from '@/components/preview/PreviewSuspense'
 import { PreviewWrapper } from '@/components/preview/PreviewWrapper'
-import { getHomePage } from '@/lib/sanity.client'
+import { getHomePage, getProjectsByTag } from '@/lib/sanity.client'
 import { getPreviewToken } from '@/lib/sanity.server.preview'
 
 export const revalidate = 30
 
-export default async function TestRoute() {
+export default async function WorkRoute() {
   const token = getPreviewToken()
-  const data = (await getHomePage({ token })) || {
+  const data = (await getProjectsByTag({ token })) || {
     title: '',
     overview: [],
     showcaseProjects: [],
@@ -27,14 +27,14 @@ export default async function TestRoute() {
         <PreviewSuspense
           fallback={
             <PreviewWrapper>
-              <TestPage data={data} />
+              <WorkPage data={data} />
             </PreviewWrapper>
           }
         >
-          <TestPagePreview token={token} />
+          <WorkPagePreview token={token} />
         </PreviewSuspense>
       ) : (
-        <TestPage data={data} />
+        <WorkPage data={data} />
       )}
     </>
   )

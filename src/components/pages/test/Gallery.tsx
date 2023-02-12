@@ -1,9 +1,11 @@
 'use client'
 
 import { Dialog, Transition } from '@headlessui/react'
+import clsx from 'clsx'
 import { Fragment, SetStateAction, useEffect, useState } from 'react'
 
 import { CustomPortableText } from '@/components/shared/CustomPortableText'
+import GalleryImage from '@/components/shared/GalleryImage.'
 import ImageBox from '@/components/shared/ImageBox'
 import type { ProjectPayload, ShowcaseProject } from '@/types'
 
@@ -12,11 +14,11 @@ export function Gallery({
   images,
 }: {
   project: ShowcaseProject
-  images?: string[]
+  images: string[]
 }) {
   const [imageToShow, setImageToShow] = useState('')
   const [lightboxDisplay, setLightBoxDisplay] = useState(false)
-  // console.log(images)
+  const [tag, setTag] = useState('all')
 
   const showImage = (image: SetStateAction<string>) => {
     setImageToShow(image)
@@ -55,59 +57,25 @@ export function Gallery({
   }
 
   return (
-    <div className="flex flex-col gap-x-5 p-2 transition hover:bg-gray-50/50 ">
-      <div className="w-full ">
-        <ImageBox
+    <li className="relative ">
+      <div className="group aspect-w-3 aspect-h-2   block w-full overflow-hidden rounded-lg focus-within:ring-2 focus-within:ring-orange-500 focus-within:ring-offset-2 focus:outline-none ">
+        <GalleryImage
           image={project.coverImage}
           alt={`Cover image from ${project.title}`}
-          classesWrapper="relative aspect-w-16 aspect-h-9"
         />
+        <button
+          onClick={() => showImage(project.coverImage)}
+          type="button"
+          className="absolute inset-0 focus:outline-none"
+        >
+          <span className="sr-only">View details for {project.title}</span>
+        </button>
       </div>
+      <p className="pointer-events-none mt-2 block truncate text-sm font-medium text-gray-900">
+        {project.title}
+      </p>
 
       <div className="relative mt-2 flex w-full flex-col justify-between p-3 xl:mt-0">
-        <div>
-          {/* Title */}
-          <div className="mb-2 text-xl font-extrabold tracking-tight md:text-2xl">
-            {project.title}
-          </div>
-          {/* Overview  */}
-          <div className="font-serif text-gray-500">
-            <CustomPortableText value={project.overview} />
-          </div>
-          <button onClick={() => showImage(project.coverImage)}>Open</button>
-        </div>
-        {/* Tags */}
-        <div className="mt-4 flex flex-row gap-x-2">
-          {project.tags?.map((tag, key) => (
-            <div className="text-sm font-medium lowercase md:text-lg" key={key}>
-              #{tag}
-            </div>
-          ))}
-        </div>
-        {/* <Dialog
-          className="relative z-50"
-          open={isOpen}
-          onClose={() => setIsOpen(false)}
-        >
-          <div className="fixed inset-0 bg-black/30" aria-hidden="true" />
-          <div className="fixed inset-0 flex  items-center justify-center  p-4">
-            <Dialog.Panel className="bg-white">
-              <Dialog.Title>Deactivate account</Dialog.Title>
-              <Dialog.Description>
-                This will permanently deactivate your account
-              </Dialog.Description>
-
-              <ImageBox
-                image={project.coverImage}
-                alt={`Cover image from ${project.title}`}
-                classesWrapper="relative aspect-w-16 aspect-h-9"
-              />
-
-              <button onClick={() => setIsOpen(false)}>Deactivate</button>
-              <button onClick={() => setIsOpen(false)}>Cancel</button>
-            </Dialog.Panel>
-          </div>
-        </Dialog> */}
         <Transition.Root show={lightboxDisplay} as={Fragment}>
           <Dialog
             className="relative z-50"
@@ -145,13 +113,6 @@ export function Gallery({
                   leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
                 >
                   <div className="inline-block max-w-screen-lg transform overflow-hidden rounded-lg bg-white px-4 pt-5 pb-4 text-left align-bottom shadow-xl transition-all sm:my-8 sm:w-full sm:p-6 sm:align-middle">
-                    {/* <Image
-                        className=" block w-full overflow-hidden rounded-lg"
-                        src={imageToShow}
-                        alt=""
-                        fill
-                      /> */}
-
                     <ImageBox
                       image={imageToShow}
                       alt={`Cover image from ${project.title}`}
@@ -202,6 +163,6 @@ export function Gallery({
           </Dialog>
         </Transition.Root>
       </div>
-    </div>
+    </li>
   )
 }
