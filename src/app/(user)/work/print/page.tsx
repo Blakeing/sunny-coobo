@@ -1,17 +1,17 @@
 import { notFound } from 'next/navigation'
 
-import { WorkPage } from '@/components/pages/work/WorkPage'
+import { PrintPage } from '@/components/pages/work/print/PrintPage'
 import { WorkPagePreview } from '@/components/pages/work/WorkPagePreview'
 import { PreviewSuspense } from '@/components/preview/PreviewSuspense'
 import { PreviewWrapper } from '@/components/preview/PreviewWrapper'
-import { getProjects } from '@/lib/sanity.client'
+import { getProjectsByPrintTag } from '@/lib/sanity.client'
 import { getPreviewToken } from '@/lib/sanity.server.preview'
 
 export const revalidate = 30
 
-export default async function WorkRoute() {
+export default async function WorkPrintRoute() {
   const token = getPreviewToken()
-  const data = (await getProjects({ token })) || { projects: [] }
+  const data = (await getProjectsByPrintTag({ token })) || { projects: [] }
 
   if (!data && !token) {
     notFound()
@@ -23,14 +23,14 @@ export default async function WorkRoute() {
         <PreviewSuspense
           fallback={
             <PreviewWrapper>
-              <WorkPage data={data} />
+              <PrintPage data={data} />
             </PreviewWrapper>
           }
         >
           <WorkPagePreview token={token} />
         </PreviewSuspense>
       ) : (
-        <WorkPage data={data} />
+        <PrintPage data={data} />
       )}
     </>
   )

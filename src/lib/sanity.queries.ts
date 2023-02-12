@@ -15,7 +15,22 @@ export const projectBySlugQuery = groq`
   }
 `
 
-export const projectByTagQuery = groq`
+export const projectsQuery = groq`
+  *[_type == "project"] {
+    _id,
+    client, 
+    coverImage,
+    description,
+    duration, 
+    overview,
+    site, 
+    "slug": slug.current,
+    tags,
+    title,
+  }
+`
+
+export const projectByWebTagQuery = groq`
   *[_type == "project" && "web" in tags] {
     _id,
     client, 
@@ -28,6 +43,34 @@ export const projectByTagQuery = groq`
     tags,
     title,
   }`
+
+export const projectByPrintTagQuery = groq`
+*[_type == "project" && "print" in tags] {
+  _id,
+  client, 
+  coverImage,
+  description,
+  duration, 
+  overview,
+  site, 
+  "slug": slug.current,
+  tags,
+  title,
+}`
+
+export const projectByBrandTagQuery = groq`
+*[_type == "project" && "brand" in tags] {
+  _id,
+  client, 
+  coverImage,
+  description,
+  duration, 
+  overview,
+  site, 
+  "slug": slug.current,
+  tags,
+  title,
+}`
 
 export const petQuery = groq`
   *[_type == "pet"]
