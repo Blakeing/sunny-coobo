@@ -23,10 +23,10 @@ export default function GalleryImage({
     image && urlForImage(image)?.height(height).width(width).fit('crop').url()
 
   return (
-    <div className={`${classesWrapper}`}>
+    <div className={`object-cover group-hover:opacity-75 ${classesWrapper}`}>
       {imageUrl && (
         <Image
-          className="object-cover"
+          className="absolute h-full w-full "
           alt={alt}
           width={width}
           height={height}
