@@ -87,7 +87,7 @@ export function Gallery({
                 leaveFrom="opacity-100"
                 leaveTo="opacity-0"
               >
-                <Dialog.Overlay className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
+                <Dialog.Overlay className="fixed inset-0 bg-black/75  transition-opacity" />
               </Transition.Child>
 
               {/* This element is to trick the browser into centering the modal contents. */}
@@ -106,59 +106,60 @@ export function Gallery({
                 leaveFrom="opacity-100 translate-y-0 sm:scale-100"
                 leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
               >
-                <div className="inline-block max-w-screen-lg transform overflow-hidden rounded-lg bg-white px-4 pt-5 pb-4 text-left align-bottom shadow-xl transition-all sm:my-8 sm:w-full sm:p-6 sm:align-middle">
-                  <ImageBox
+                <div className="inline-block w-full  max-w-[1000px] transform   overflow-hidden px-4 pt-5 pb-4 text-left  align-bottom transition-all sm:my-8 sm:p-6 sm:align-middle">
+                  <GalleryImage
                     image={imageToShow}
                     alt={`Cover image from ${project.title}`}
-                    classesWrapper="relative aspect-w-3 aspect-h-2"
+                    classesWrapper="aspect-w-3 aspect-h-2"
                   />
 
-                  <div className="flex justify-between space-x-10 pt-6">
-                    <button type="button" className="" onClick={showPrev}>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-10 w-10"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                    </button>
-                    <button
-                      type="button"
-                      className="inline-flex w-full justify-center rounded-md border border-transparent bg-orange-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 sm:text-sm"
-                      onClick={hideLightBox}
-                    >
-                      Go back to dashboard
-                    </button>
-                    {/* <Link
-                        className="inline-flex w-full justify-center rounded-md border border-transparent bg-orange-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 sm:text-sm"
-                        href={`/projects/${project.slug}`}
-                      >
-                        To Project
-                      </Link> */}
-                    <button type="button" className=" " onClick={showNext}>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-10 w-10"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                    </button>
-                  </div>
+                  {/* <button
+                    type="button"
+                    className="mt-4 inline-flex w-full justify-center rounded-md border border-transparent bg-orange-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 sm:text-sm"
+                    onClick={hideLightBox}
+                  >
+                    Back to Gallery
+                  </button> */}
                 </div>
               </Transition.Child>
             </div>
+            <button
+              type="button"
+              className="absolute left-[5vw] top-1/2 text-white"
+              onClick={showPrev}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-10 w-10"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </button>
+
+            <button
+              type="button"
+              className="absolute right-[5vw] top-1/2 text-white"
+              onClick={showNext}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-10 w-10"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </button>
           </div>
         </Dialog>
       </Transition.Root>

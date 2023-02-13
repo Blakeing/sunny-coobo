@@ -14,8 +14,8 @@ interface ImageBoxProps {
 export default function GalleryImage({
   image,
   alt = 'Cover image',
-  width = 600,
-  height = 400,
+  width = 1000,
+  height = parseInt('666.67'),
   size = '100vw',
   classesWrapper,
 }: ImageBoxProps) {
@@ -23,10 +23,10 @@ export default function GalleryImage({
     image && urlForImage(image)?.height(height).width(width).fit('crop').url()
 
   return (
-    <div className={`object-cover group-hover:opacity-75 ${classesWrapper}`}>
+    <div className={`group-hover:opacity-75 ${classesWrapper}`}>
       {imageUrl && (
         <Image
-          className="absolute h-full w-full "
+          className="block w-full overflow-hidden"
           alt={alt}
           width={width}
           height={height}
