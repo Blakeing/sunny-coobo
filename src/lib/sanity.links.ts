@@ -3,8 +3,6 @@ export function resolveHref(
   slug?: string
 ): string | undefined {
   switch (documentType) {
-    case 'home':
-      return '/'
     //   case 'page':
     //     return slug ? `/${slug}` : undefined
     case 'project':

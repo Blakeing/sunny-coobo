@@ -65,19 +65,3 @@ export async function getProjectsByBrandTag({
 }): Promise<ProjectPayload | undefined> {
   return await sanityClient(token)?.fetch(projectByBrandTagQuery)
 }
-
-export async function getHomePage({
-  token,
-}: {
-  token?: string
-}): Promise<HomePagePayload | undefined> {
-  return await sanityClient(token)?.fetch(homePageQuery)
-}
-
-export async function getHomePageTitle({
-  token,
-}: {
-  token?: string
-}): Promise<string | undefined> {
-  return await sanityClient(token)?.fetch(homePageTitleQuery)
-}

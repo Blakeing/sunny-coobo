@@ -18,7 +18,6 @@ import { productionUrl } from '@/plugins/productionUrl'
 import { pageStructure, singletonPlugin } from '@/plugins/settings'
 import { schemaTypes } from '@/schemas'
 import project from '@/schemas/documents/project'
-import home from '@/schemas/singletons/home'
 
 const title = process.env.NEXT_PUBLIC_SANITY_PROJECT_TITLE || 'Coobo Media'
 
@@ -40,12 +39,12 @@ export default defineConfig({
   },
   plugins: [
     deskTool({
-      structure: pageStructure([home]),
+      // structure: pageStructure(),
       // `defaultDocumentNode` is responsible for adding a “Preview” tab to the document pane
       defaultDocumentNode: previewDocumentNode({ apiVersion, previewSecretId }),
     }),
     // Configures the global "new document" button, and document actions, to suit the Settings document singleton
-    singletonPlugin([home.name]),
+    // singletonPlugin([home.name]),
 
     // Add the "Open preview" action
     productionUrl({

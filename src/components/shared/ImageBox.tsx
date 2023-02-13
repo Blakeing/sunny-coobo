@@ -32,7 +32,7 @@ export default function ImageBox({
           alt={alt}
           width={250}
           height={145}
-          sizes={size} 
+          sizes={size}
           src={imageUrl}
         />
       )}

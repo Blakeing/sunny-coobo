@@ -71,28 +71,3 @@ export const projectByBrandTagQuery = groq`
   tags,
   title,
 }`
-
-export const petQuery = groq`
-  *[_type == "pet"]
-`
-
-export const homePageQuery = groq`
-  *[_type == "home"][0]{
-    _id, 
-    footer,
-    overview, 
-    showcaseProjects[]->{
-      _type,
-      coverImage, 
-      overview, 
-      "slug": slug.current,
-      tags, 
-      title, 
-    }, 
-    title, 
-  }
-`
-
-export const homePageTitleQuery = groq`
-  *[_type == "home"][0].title
-`

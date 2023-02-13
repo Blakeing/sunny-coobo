@@ -1,8 +1,6 @@
 'use client'
 
 import { Dialog, Transition } from '@headlessui/react'
-import clsx from 'clsx'
-import Link from 'next/link'
 import { Fragment, SetStateAction, useEffect, useState } from 'react'
 
 import { CustomPortableText } from '@/components/shared/CustomPortableText'
