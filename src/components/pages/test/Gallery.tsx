@@ -56,10 +56,11 @@ export function Gallery({
 
   return (
     <li className="relative ">
-      <div className="group aspect-w-3 aspect-h-2  w-full overflow-hidden   ">
+      <div className="group aspect-w-3 aspect-h-2  overflow-hidden">
         <GalleryImage
           image={project.coverImage}
           alt={`Cover image from ${project.title}`}
+          classesWrapper="group-hover:opacity-75"
         />
         <button
           onClick={() => showImage(project.coverImage)}
@@ -110,7 +111,7 @@ export function Gallery({
                   <GalleryImage
                     image={imageToShow}
                     alt={`Cover image from ${project.title}`}
-                    classesWrapper="aspect-w-3 aspect-h-2"
+                    classesWrapper="group aspect-w-3 aspect-h-2 block w-full overflow-hidden"
                   />
 
                   {/* <button
