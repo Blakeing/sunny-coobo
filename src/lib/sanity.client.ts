@@ -4,14 +4,12 @@ import { createClient } from 'next-sanity'
 
 import { apiVersion, dataset, projectId, useCdn } from '@/lib/sanity.api'
 import {
-  homePageQuery,
-  homePageTitleQuery,
   projectByBrandTagQuery,
   projectByPrintTagQuery,
   projectBySlugQuery,
   projectByWebTagQuery,
 } from '@/lib/sanity.queries'
-import type { HomePagePayload, ProjectPayload } from '@/types'
+import type { ProjectPayload } from '@/types'
 
 import { projectsQuery } from './sanity.queries'
 
