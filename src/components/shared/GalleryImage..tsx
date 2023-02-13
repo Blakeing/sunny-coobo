@@ -16,7 +16,7 @@ export default function GalleryImage({
   alt = 'Cover image',
   width = 1000,
   height = parseInt('666.67'),
-  size = '100vw',
+
   classesWrapper,
 }: ImageBoxProps) {
   const imageUrl =
@@ -30,7 +30,6 @@ export default function GalleryImage({
           alt={alt}
           width={width}
           height={height}
-          sizes={size}
           src={imageUrl}
         />
       )}
