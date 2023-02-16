@@ -9,7 +9,7 @@ function WebRoute() {
   return (
     <>
       <section className=" w-full bg-web  ">
-        <div className=" relative mx-auto grid max-w-7xl grid-cols-1 px-6 pt-[133.29px] pb-16 md:grid-cols-2 md:pt-[176px] lg:px-8">
+        <div className=" coobo-container relative mx-auto grid max-w-7xl grid-cols-1 pt-[133.29px] pb-16 md:grid-cols-2 md:pt-[176px] ">
           <div className="">
             <h1 className="mb-2 font-display text-6xl font-bold text-white  ">
               Web.

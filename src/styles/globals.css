@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 .coobo-container {
-  padding: calc(8px + 1.5625vw);
+  padding-left: calc(8px + 1.5625vw);
+  padding-right: calc(8px + 1.5625vw);
 }
 
 .intro-border {
