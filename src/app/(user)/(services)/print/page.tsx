@@ -130,7 +130,7 @@ function PrintRoute() {
       </section>
       <section className="w-full">
         <div className="mx-auto grid  grid-cols-12  ">
-          <div className="col-span-12 bg-print px-[5vw] py-16 lg:col-span-8">
+          <div className="coobo-container col-span-12 bg-print py-16 lg:col-span-8">
             <h3 className="mb-8 font-display text-3xl font-bold text-white">
               Contact Us
             </h3>

@@ -41,7 +41,7 @@ export function HomePage({ data }: { data: HomePagePayload }) {
             sizes="100vw"
             className="object-cover"
           />
-          <div className="absolute inset-0 z-10 mx-auto flex h-full w-full max-w-7xl flex-col justify-center px-[5vw] ">
+          <div className="coobo-container absolute inset-0 z-10 mx-auto flex h-full w-full max-w-7xl flex-col justify-center ">
             <h1 className="pb-4 text-3xl font-bold text-white lg:text-7xl">
               A Creative Agency
             </h1>
@@ -79,7 +79,7 @@ export function HomePage({ data }: { data: HomePagePayload }) {
           </div>
         </div>
         {/* Web */}
-        <div className="mx-auto max-w-7xl space-y-16 px-[5vw] py-20">
+        <div className="coobo-container mx-auto max-w-7xl space-y-16 py-20">
           <section className="grid-col-1 grid gap-12  lg:grid-cols-2">
             <div className="flex flex-col justify-center">
               <h2 className="pb-2.5 font-display text-5xl font-bold text-web">

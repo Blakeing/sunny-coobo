@@ -53,7 +53,7 @@ export default function TestimonialSlider() {
 
   return (
     <>
-      <div className="relative bg-[#333333] px-[5vw] pt-[5vw]">
+      <div className="coobo-container relative bg-[#333333] pt-[5vw]">
         <div ref={sliderRef} className="keen-slider">
           <div className="keen-slider__slide number-slide1">
             <div className="flex max-w-7xl flex-col items-center justify-center">

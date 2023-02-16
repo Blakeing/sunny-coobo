@@ -43,7 +43,7 @@ const industries = [
 function AboutRoute() {
   return (
     <>
-      <div className="relative flex h-80 flex-col justify-center bg-gray-200 px-[5vw] pt-[112.1px]">
+      <div className="coobo-container relative flex h-80 flex-col justify-center bg-gray-200 pt-[112.1px]">
         <h1 className="z-10 font-display text-5xl font-bold text-white">
           About Us
         </h1>

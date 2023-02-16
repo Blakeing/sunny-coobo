@@ -18,7 +18,7 @@ export default function WorkLayout({
       {token && <PreviewBanner />}
       <Header />
       <main>
-        <div className="relative flex h-80 flex-col justify-center bg-gray-200 px-[5vw] pt-[112.1px]">
+        <div className="coobo-container relative flex h-80 flex-col justify-center bg-gray-200 pt-[112.1px]">
           <div className="z-10 flex flex-col items-center justify-between lg:flex-row">
             <h1 className="font-display text-5xl font-bold text-white">
               Our Work
