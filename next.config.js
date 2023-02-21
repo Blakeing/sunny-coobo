@@ -3,10 +3,6 @@ module.exports = {
   reactStrictMode: true,
   experimental: {
     appDir: true,
-    scrollRestoration: true,
-    experimental: {
-      nextScriptWorkers: true,
-    },
   },
   images: {
     domains: ['images.unsplash.com', 'cdn.sanity.io'],

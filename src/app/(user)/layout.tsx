@@ -1,7 +1,6 @@
 import '@/styles/globals.css'
 
 import { Montserrat, Open_Sans } from '@next/font/google'
-import Script from 'next/script'
 
 import Fathom from '@/lib/Fathom'
 
