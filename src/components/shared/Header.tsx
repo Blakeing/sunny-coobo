@@ -122,39 +122,35 @@ export default function Header() {
               <Image priority height={64} width={144} src={logo} alt="Logo" />
             </Link>
             {/* Navigation*/}
-            <Popover.Group
-              as="nav"
-              className="hidden items-center space-x-8 md:flex "
-            >
+            <nav className="hidden items-center space-x-8 md:flex">
               {links.map((link) => (
-                <Popover key={link.label} className="relative">
-                  <Popover.Button className="space-x-6 text-sm font-bold text-white  focus:outline-none ">
-                    {link.label}
-                  </Popover.Button>
-                  <Transition
-                    className="absolute top-[68px] z-10 "
-                    enter="transition duration-100 ease-out"
-                    enterFrom="transform scale-95 opacity-0"
-                    enterTo="transform scale-100 opacity-100"
-                    leave="transition duration-75 ease-out"
-                    leaveFrom="transform scale-100 opacity-100"
-                    leaveTo="transform scale-95 opacity-0"
+                <div key={link.label} className="dropdown-hover dropdown ">
+                  <Link href={link.href}>
+                    <label
+                      tabIndex={0}
+                      className="cursor-pointer space-x-6 text-sm font-bold leading-[4rem] text-white hover:underline hover:decoration-2 hover:underline-offset-8   "
+                    >
+                      {link.label}
+                    </label>
+                  </Link>
+                  <ul
+                    tabIndex={0}
+                    className="dropdown-content menu top-16  flex w-48 flex-col  bg-black/75 p-5 shadow-lg shadow-black/5"
                   >
-                    <Popover.Panel className="flex w-48 flex-col  bg-black/75 p-5 shadow-lg shadow-black/5 ">
-                      {link.subLinks.map((subLabel) => (
+                    {link.subLinks.map((subLabel) => (
+                      <li key={subLabel.label}>
                         <Link
-                          className="p-1 text-sm text-white hover:bg-[#313233]"
-                          key={subLabel.label}
+                          className="p-1 text-sm text-white hover:!rounded-none hover:bg-[#313233]"
                           href={subLabel.href}
                         >
                           {subLabel.label}
                         </Link>
-                      ))}
-                    </Popover.Panel>
-                  </Transition>
-                </Popover>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               ))}
-            </Popover.Group>
+            </nav>
           </div>
         </div>
       </div>

@@ -28,6 +28,23 @@ module.exports = {
       },
     },
   },
+  daisyui: {
+    themes: [
+      {
+        mytheme: {
+          primary: '#EC5335',
+          secondary: '#B7B7B7',
+          accent: '#252525',
+          neutral: '#676767',
+          'base-100': '#FFFFFF',
+          info: '#3ABFF8',
+          success: '#36D399',
+          warning: '#FBBD23',
+          error: '#F87272',
+        },
+      },
+    ],
+  },
   corePlugins: {
     aspectRatio: false,
   },
@@ -36,5 +53,6 @@ module.exports = {
     require('@tailwindcss/typography'),
     require('@headlessui/tailwindcss'),
     require('@tailwindcss/forms'),
+    require('daisyui'),
   ],
 }
