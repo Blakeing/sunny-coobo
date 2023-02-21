@@ -1,5 +1,10 @@
 /** @type {import('next').NextConfig} */
-module.exports = {
+
+const { withPlausibleProxy } = require('next-plausible')
+
+module.exports = withPlausibleProxy()({
+  // ...your next js config, if any
+  // Important! it is mandatory to pass a config object, even if empty
   reactStrictMode: true,
   experimental: {
     appDir: true,
@@ -15,4 +20,4 @@ module.exports = {
     /// Set this to false if you want production builds to abort if there's lint errors
     ignoreDuringBuilds: process.env.VERCEL_ENV === 'production',
   },
-}
+})
