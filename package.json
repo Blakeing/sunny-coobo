@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "build": "npm run partytown && next build",
+    "build": "next build",
     "postbuild": "next-sitemap",
     "dev": "next",
     "format": "npx prettier --write . --ignore-path .gitignore",
