@@ -9,7 +9,7 @@ function TrackPageView() {
   const pathname = usePathname()
   const searchParams = useSearchParams()
   useEffect(() => {
-    load(process.env.NEXT_PUBLIC_FATHOM_ID || '', {
+    load('OZIGYCOY', {
       includedDomains: ['sunny-coobo.vercel.app'],
     })
   }, [])
