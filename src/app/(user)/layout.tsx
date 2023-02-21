@@ -3,7 +3,7 @@ import '@/styles/globals.css'
 import { Montserrat, Open_Sans } from '@next/font/google'
 import Script from 'next/script'
 
-import Analytics from '@/lib/Analytics'
+import Fathom from '@/lib/Fathom'
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -25,7 +25,7 @@ export default function RootLayout({
       className={`${montserrat.variable} ${openSans.variable} h-full max-w-[100vw] overflow-x-hidden scroll-smooth  antialiased `}
     >
       <body className="">
-        <Analytics />
+        <Fathom />
         {children}
       </body>
     </html>
