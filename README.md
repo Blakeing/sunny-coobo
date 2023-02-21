@@ -1,4 +1,3 @@
-magic padding
 Site map
 Redirects
 Style dashboard
@@ -7,6 +6,7 @@ Loading ui
 Meta tags
 Google analytics
 properly size images
+partytwon google analytis
 search
 clean up unused assets
 add featured images to clients

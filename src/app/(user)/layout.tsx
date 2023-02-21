@@ -1,8 +1,9 @@
 import '@/styles/globals.css'
 
 import { Montserrat, Open_Sans } from '@next/font/google'
+import Script from 'next/script'
 
-import { useScrollPadding } from '@/utils/useScrollPadding'
+import Analytics from '@/lib/Analytics'
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -23,7 +24,20 @@ export default function RootLayout({
       lang="en"
       className={`${montserrat.variable} ${openSans.variable} h-full max-w-[100vw] overflow-x-hidden scroll-smooth  antialiased `}
     >
-      <body className="">{children}</body>
+      <body className="">
+        {children}
+        <Analytics />
+        <Script id="onRouteChange">{`
+        (function (history) {
+          var pushState = history.pushState;
+          history.pushState = function(state){
+            var result = pushState.apply(history, arguments);
+            window.dispatchEvent(new Event("routeChange", state));
+            return result;
+          };
+        })(window.history);
+      `}</Script>
+      </body>
     </html>
   )
 }

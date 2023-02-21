@@ -1,12 +1,13 @@
 {
   "private": true,
   "scripts": {
-    "build": "next build",
+    "build": "npm run partytown && next build",
     "postbuild": "next-sitemap",
     "dev": "next",
     "format": "npx prettier --write . --ignore-path .gitignore",
     "lint": "next lint -- --ignore-path .gitignore",
     "lint:fix": "npm run format && npm run lint -- --fix",
+    "partytown": "partytown copylib public/~partytown",
     "start": "next start",
     "type-check": "tsc --noEmit"
   },
@@ -15,6 +16,7 @@
     "singleQuote": true
   },
   "dependencies": {
+    "@builder.io/partytown": "^0.7.5",
     "@formspree/react": "^2.4.1",
     "@headlessui/react": "^1.7.8",
     "@headlessui/tailwindcss": "^0.1.2",
@@ -42,6 +44,7 @@
     "classnames": "^2.3.2",
     "clsx": "^1.2.1",
     "date-fns": "^2.29.3",
+    "fathom-client": "^3.5.0",
     "framer-motion": "^9.0.1",
     "google-map-react": "^2.2.0",
     "intl-segmenter-polyfill": "^0.4.4",
