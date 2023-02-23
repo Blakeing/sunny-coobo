@@ -13,21 +13,14 @@ import webInsta from '@public/web-insta.jpeg'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { ProjectListItem } from '@/components/pages/home/ProjectListItem'
 import Footer from '@/components/shared/Footer'
 import Header from '@/components/shared/Header'
-import { Button } from '@/components/ui/Button'
 import ClientSlider from '@/components/ui/ClientSlider'
-import Testimonials from '@/components/ui/TestimonialSlider'
 import TestimonialSlider from '@/components/ui/TestimonialSlider'
 import TypeWriterText from '@/components/ui/TypeWriterText'
-import { resolveHref } from '@/lib/sanity.links'
-import type { HomePagePayload } from '@/types'
+import type { ClientPayload, HomePagePayload } from '@/types'
 
-export function HomePage({ data }: { data: HomePagePayload }) {
-  // Default to an empty object to allow previews on non-existent documents
-  const { overview, showcaseProjects, title } = data || {}
-
+export default function HomePage({ data }: { data: ClientPayload }) {
   return (
     <>
       <Header />
@@ -341,7 +334,7 @@ export function HomePage({ data }: { data: HomePagePayload }) {
             <Image className=" object-cover" alt="Video" src={webInsta} fill />
           </div>
         </div>
-        <ClientSlider />
+        <ClientSlider data={data} />
       </main>
       <Footer />
     </>

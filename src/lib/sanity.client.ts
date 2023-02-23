@@ -4,12 +4,13 @@ import { createClient } from 'next-sanity'
 
 import { apiVersion, dataset, projectId, useCdn } from '@/lib/sanity.api'
 import {
+  clientsQuery,
   projectByBrandTagQuery,
   projectByPrintTagQuery,
   projectBySlugQuery,
   projectByWebTagQuery,
 } from '@/lib/sanity.queries'
-import type { ProjectPayload } from '@/types'
+import type { ClientPayload, ProjectPayload } from '@/types'
 
 import { projectsQuery } from './sanity.queries'
 
@@ -62,4 +63,12 @@ export async function getProjectsByBrandTag({
   token?: string
 }): Promise<ProjectPayload | undefined> {
   return await sanityClient(token)?.fetch(projectByBrandTagQuery)
+}
+
+export async function getClients({
+  token,
+}: {
+  token?: string
+}): Promise<ClientPayload | undefined> {
+  return await sanityClient(token)?.fetch(clientsQuery)
 }

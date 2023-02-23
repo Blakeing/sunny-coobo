@@ -1,14 +1,12 @@
 import Footer from '@/components/shared/Footer'
 import Header from '@/components/shared/Header'
 import { TabGroup } from '@/components/ui/TabGroup'
-import { fetchCategories } from '@/lib/getCategories'
 
 export default async function ServicesLayout({
   children, // will be a page or nested layout
 }: {
   children: React.ReactNode
 }) {
-  const categories = await fetchCategories()
   return (
     <>
       <Header />

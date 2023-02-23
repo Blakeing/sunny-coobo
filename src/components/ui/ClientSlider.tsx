@@ -7,9 +7,13 @@ import { useKeenSlider } from 'keen-slider/react'
 import Image from 'next/image'
 import React, { useState } from 'react'
 
+import { ClientPayload } from '@/types'
+
+import ClientSliderImage from '../shared/ClientSliderImage'
+
 const animation = { duration: 10000, easing: (t: number) => t }
 
-export default function TestimonialSlider() {
+export default function ClientSlider({ data }: { data: ClientPayload }) {
   const [currentSlide, setCurrentSlide] = React.useState(0)
   const [loaded, setLoaded] = useState(false)
   const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
@@ -34,7 +38,17 @@ export default function TestimonialSlider() {
     <>
       <div className="relative bg-[#333333]  py-[5vw]">
         <div ref={sliderRef} className="keen-slider">
-          <div className="keen-slider__slide number-slide1">
+          {data.map((client) => (
+            <ClientSliderImage
+              key={client._id}
+              image={client.clientImage}
+              width={250}
+              height={148}
+              alt={client.altText}
+              classesWrapper="keen-slider__slide number-slide1"
+            />
+          ))}
+          {/* <div className="keen-slider__slide number-slide1">
             <Image src={aag} width={250} height={148} alt="aag" />
           </div>
           <div className="keen-slider__slide number-slide1">
@@ -61,7 +75,7 @@ export default function TestimonialSlider() {
           </div>
           <div className="keen-slider__slide number-slide1">
             <Image src={aag} width={250} height={148} alt="aag" />
-          </div>
+          </div> */}
         </div>
       </div>
       {loaded && instanceRef.current && (

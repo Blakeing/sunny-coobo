@@ -1,6 +1,7 @@
 // schemas/index.js
 
-import client from './documents/client'
+import clients from './documents/clients'
 import project from './documents/project'
+import testimonials from './documents/testimonials'
 
-export const schemaTypes = [project, client]
+export const schemaTypes = [project, testimonials, clients]

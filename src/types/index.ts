@@ -22,6 +22,12 @@ export interface ProjectPayload {
   title?: string
 }
 
+export interface ClientPayload {
+  altText?: string
+  clientImage?: Image
+  title?: string
+}
+
 export interface HomePagePayload {
   footer?: PortableTextBlock[]
   overview?: PortableTextBlock[]
@@ -38,39 +44,3 @@ export interface ImageProps {
   format: string
   blurDataUrl?: string
 }
-
-export interface SharedModalProps {
-  index: number
-  images?: ImageProps[]
-  currentPhoto?: ImageProps
-  changePhotoId: (newVal: number) => void
-  closeModal: () => void
-  navigation: boolean
-  direction?: number
-}
-
-export type StepOneData = {
-  firstName: string
-  lastName: string
-  email: string
-  company: string
-  phone: string
-}
-
-export type StepTwoData = {
-  whatDoesYourCompanyDo: string
-  targetAudience: string
-  usp: string
-  brandGuidelines: string
-}
-
-export type StepThreeData = {
-  currentWebsite: string
-  url: string
-  likeDislike: string
-  purchasedUrl: string
-  likedUrls: string
-  goal: string
-}
-
-export type FormData = StepOneData & StepTwoData & StepThreeData

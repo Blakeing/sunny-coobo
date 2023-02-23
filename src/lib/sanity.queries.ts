@@ -30,6 +30,15 @@ export const projectsQuery = groq`
   }
 `
 
+export const clientsQuery = groq`
+  *[_type == "clients"] {
+    _id,
+    clientImage,
+    altText,
+    title,
+  }
+`
+
 export const projectByWebTagQuery = groq`
   *[_type == "project" && "web" in tags] {
     _id,
