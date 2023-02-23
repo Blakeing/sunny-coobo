@@ -275,22 +275,6 @@ export default function HomePage({ data }: { data: ClientPayload }) {
               </svg>
             </div>
           </section>
-
-          {/* {showcaseProjects && showcaseProjects.length > 0 && (
-            <section className="mx-auto max-w-[100rem] rounded-md border">
-              {showcaseProjects.map((project, key) => {
-                const href = resolveHref(project._type, project.slug)
-                if (!href) {
-                  return null
-                }
-                return (
-                  <Link key={key} href={href}>
-                    <ProjectListItem project={project} odd={key % 2} />
-                  </Link>
-                )
-              })}
-            </section>
-          )} */}
         </div>
         {/* Testimonials */}
         <TestimonialSlider />
