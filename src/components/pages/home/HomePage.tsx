@@ -15,6 +15,7 @@ import Link from 'next/link'
 
 import Footer from '@/components/shared/Footer'
 import Header from '@/components/shared/Header'
+import ScrollUp from '@/components/shared/ScrollUp'
 import ClientSlider from '@/components/ui/ClientSlider'
 import TestimonialSlider from '@/components/ui/TestimonialSlider'
 import TypeWriterText from '@/components/ui/TypeWriterText'
@@ -337,6 +338,8 @@ export default function HomePage({ data }: { data: ClientPayload }) {
         <ClientSlider data={data} />
       </main>
       <Footer />
+      {/* Workaround: scroll to top on route change */}
+      <ScrollUp />
     </>
   )
 }

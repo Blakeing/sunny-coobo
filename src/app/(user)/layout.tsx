@@ -21,7 +21,7 @@ export default function RootLayout({
       lang="en"
       className={`${montserrat.variable} ${openSans.variable} h-full max-w-[100vw] overflow-x-hidden scroll-smooth  antialiased `}
     >
-      <body className="">{children}</body>
+      <body>{children}</body>
     </html>
   )
 }

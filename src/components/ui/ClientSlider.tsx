@@ -2,9 +2,7 @@
 
 import 'keen-slider/keen-slider.min.css'
 
-import aag from '@public/clients/client_aag-law.webp'
 import { useKeenSlider } from 'keen-slider/react'
-import Image from 'next/image'
 import React, { useState } from 'react'
 
 import { ClientPayload } from '@/types'
@@ -48,34 +46,6 @@ export default function ClientSlider({ data }: { data: ClientPayload }) {
               classesWrapper="keen-slider__slide number-slide1"
             />
           ))}
-          {/* <div className="keen-slider__slide number-slide1">
-            <Image src={aag} width={250} height={148} alt="aag" />
-          </div>
-          <div className="keen-slider__slide number-slide1">
-            <Image src={aag} width={250} height={148} alt="aag" />
-          </div>
-          <div className="keen-slider__slide number-slide1">
-            <Image src={aag} width={250} height={148} alt="aag" />
-          </div>
-
-          <div className="keen-slider__slide number-slide1">
-            <Image src={aag} width={250} height={148} alt="aag" />
-          </div>
-          <div className="keen-slider__slide number-slide1">
-            <Image src={aag} width={250} height={148} alt="aag" />
-          </div>
-          <div className="keen-slider__slide number-slide1">
-            <Image src={aag} width={250} height={148} alt="aag" />
-          </div>
-          <div className="keen-slider__slide number-slide1">
-            <Image src={aag} width={250} height={148} alt="aag" />
-          </div>
-          <div className="keen-slider__slide number-slide1">
-            <Image src={aag} width={250} height={148} alt="aag" />
-          </div>
-          <div className="keen-slider__slide number-slide1">
-            <Image src={aag} width={250} height={148} alt="aag" />
-          </div> */}
         </div>
       </div>
       {loaded && instanceRef.current && (
