@@ -1,7 +1,6 @@
 import { notFound } from 'next/navigation'
 
 import HomePage from '@/components/pages/home/HomePage'
-import { WorkPage } from '@/components/pages/work/WorkPage'
 import { WorkPagePreview } from '@/components/pages/work/WorkPagePreview'
 import { PreviewSuspense } from '@/components/preview/PreviewSuspense'
 import { PreviewWrapper } from '@/components/preview/PreviewWrapper'
@@ -12,7 +11,7 @@ export const revalidate = 30
 
 export default async function HomeRoute() {
   const token = getPreviewToken()
-  const data = (await getClients({ token })) || {}
+  const data = (await getClients({ token })) || { clients: [] }
 
   if (!data && !token) {
     notFound()
